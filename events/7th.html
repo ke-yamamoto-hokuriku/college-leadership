@@ -81,10 +81,16 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .mats li{display:flex;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 .mats .k{width:9em;flex:none;color:var(--gray)}
 .mats .pending{color:var(--shu);font-weight:500}
-.stats{width:auto;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.stats{width:100%;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
 .stats th{width:auto;text-align:left}
 .stats td{text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
 .stats tr.total th,.stats tr.total td{background:var(--th);color:var(--ai-deep)}
+.trend th{width:auto;white-space:nowrap}
+.trend tr:first-child th{background:var(--th);text-align:left}
+.trend td{text-align:right;font-variant-numeric:tabular-nums}
+.trend tr:first-child th:nth-child(n+3){text-align:right}
+.trend td:nth-child(2){text-align:left;white-space:nowrap}
+.trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
 footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
@@ -139,7 +145,7 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 <section><div class="eyebrow">OUTLINE</div><h2>開催概要</h2><div class="tbl"><table><tr><th>日時</th><td>2025年7月12日（土）</td></tr><tr><th>会場</th><td>芝浦工業大学 豊洲キャンパス</td></tr><tr><th>主催</th><td>大学リーダーシップ研究会</td></tr><tr><th>共催</th><td>理工学教育共同利用拠点（芝浦工業大学 教育イノベーション推進センター）</td></tr><tr><th>参加者</th><td>68名（一般参加59名／主催・事務局9名）</td></tr></table></div><p style="font-size:13px;color:var(--gray);margin-top:12px">参加者数は、研究会が保有する第1〜9回の統合参加者データ（v13）にもとづく集計です。申込記録を基礎としているため、当日の実数とは若干の差がありえます。</p></section>
 <section><div class="eyebrow">PROGRAM</div><h2>登壇者とプログラム</h2><ul class="speakers"><li><span class='role'>基調講演</span><div><div class='name'>大森 昭生</div><div class='aff'>共愛学園前橋国際大学 学長</div></div></li><li><span class='role'>理論的整理</span><div><div class='name'>山本 啓一</div><div class='aff'>北陸大学 経済経営学部 教授</div><div class='talk'>「ダイナミックな教学マネジメントの4要素」</div></div></li><li><span class='role'>事例報告</span><div><div class='name'>榊原 暢久</div><div class='aff'>芝浦工業大学 教育イノベーション推進センター長</div></div></li><li><span class='role'>事例報告</span><div><div class='name'>鈴木 洋</div><div class='aff'>芝浦工業大学 情報システム部長</div></div></li><li><span class='role'>パネルディスカッション</span><div><div class='name'>登壇者全員</div></div></li></ul></section>
 <section><div class="eyebrow">REPORT</div><h2>開催報告</h2><h3>基調講演と理論的整理</h3><p>大森学長は「教マネを回すだけでは生き残れない。深化と探索を融合し、ダイナミックな教学マネジメントが必要だ」と強調し、「映える」カリキュラムや科目の創出、螺旋状の教学マネジメントサイクル、地域連携といった具体例を示しました。</p><p>山本啓一からは、①マネジメントとリーダーシップの統合、②深化と探索の両立（両利きの経営）、③非公式ネットワークの活用、④組織開発による文化変革、の4要素からなるフレームワークを提示しました。ミドル教職員が、トップのビジョンを現場に翻訳し、現場の知を上層に媒介する役割を担うことが要点です。</p><h3>事例報告とパネルディスカッション</h3><p>榊原センター長からは、カリキュラムの整合性確保から主要授業科目の要件策定まで5年をかけたプロセスが説明されました。センターが「黒子」として学部・学科の自律性を重視し、「問い」の形で課題提起を行う仕組みが印象的でした。鈴木部長からは、改革総合支援事業12年連続選定の実績を背景に、授業評価アンケートを廃止し学生の自己評価型に転換する取り組みや、職員の人材育成について紹介がありました。</p><p>パネルディスカッションでは、芝浦工業大学の教育イノベーション推進センターが大学の内部質保証体制図には描かれていないという指摘がありました。真の改革エンジンが制度図には現れない「実践の領域」にある可能性を示しています。教授会を年4回に削減する「減らす」改革や、部署を超えた横断的なチーム編成の日常化も共有されました。</p></section>
-<section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><ul class="quotes"><li>教学マネジメントを通じた大学の生き残りの視点が得られた</li><li>芝浦工大の具体的な取り組み（授業評価アンケート廃止、「問い」の形での課題提起等）が参考になった</li><li>「ポスト教学マネジメント」という切り口が新鮮で、形骸化した教マネからの脱却を考えるきっかけになった</li></ul></section>
+<section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><p>教学マネジメントと大学の生き残りを切り離さずに論じたことへの評価が中心です。学内で説明する糸口を得たという趣旨の記述が複数あり、職員主導で動かざるを得ない大学からの記述も目立ちます。</p><div class="tbl" style="max-width:460px"><table class="stats"><tr class="total"><th>研究会全体の満足度</th><td>4.69</td></tr><tr><th>基調講演　大森 昭生</th><td>4.71</td></tr><tr><th>キーワード報告　山本 啓一</th><td>4.71</td></tr><tr><th>芝浦工大事例報告</th><td>4.74</td></tr><tr><th>パネルディスカッション</th><td>4.54</td></tr><tr><th>フロア討議</th><td>4.31</td></tr><tr><th>仕事との関連性・有用性</th><td>4.61</td></tr></table></div><ul class="quotes"><li>やらされ感の漂う「教学マネジメント」は生き残りや学生募集と切り離すことができないという漠然とした思いを抱いてきましたが、説得力をもって学内で説明できる糸口を発見できました。（大学教員・副学長／学部長）</li><li>自大学で出来ていることと出来ていないことが可視化されたこと。（大学職員）</li><li>全国の同じ志や課題意識をもつ方々と知り合うことが出来て、大変有意義な時間でした。（大学教員・学部長）</li></ul><p style="font-size:13px;color:var(--gray);margin-top:12px">参加者アンケートの回答は36件（回答率52.9%）です。満足度は5段階で、数値が大きいほど高い評価を示します。</p></section>
 <section><div class="eyebrow">MATERIALS</div><h2>資料</h2><ul class="mats"><li><span class='k'>配布資料</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>発言録</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>アンケート結果</span><span>参加者向けに共有しています（掲載準備中）</span></li></ul><p style='font-size:13px;color:var(--gray)'>本研究会はJSPS科研費 基盤研究(C)「ダイナミックな教学マネジメント体制の構築〜ミドル教職員の育成と組織開発に向けて」（研究代表者：山本啓一）の助成を受けて開催しました。</p></section>
 <div class='meta' style='margin-top:48px'><a href='6th.html'>← 第6回公開研究会</a><a href='8th.html'>第8回公開研究会 →</a></div>
 <footer class="site">

@@ -81,10 +81,16 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .mats li{display:flex;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 .mats .k{width:9em;flex:none;color:var(--gray)}
 .mats .pending{color:var(--shu);font-weight:500}
-.stats{width:auto;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.stats{width:100%;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
 .stats th{width:auto;text-align:left}
 .stats td{text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
 .stats tr.total th,.stats tr.total td{background:var(--th);color:var(--ai-deep)}
+.trend th{width:auto;white-space:nowrap}
+.trend tr:first-child th{background:var(--th);text-align:left}
+.trend td{text-align:right;font-variant-numeric:tabular-nums}
+.trend tr:first-child th:nth-child(n+3){text-align:right}
+.trend td:nth-child(2){text-align:left;white-space:nowrap}
+.trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
 footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
@@ -139,7 +145,7 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 <section><div class="eyebrow">OUTLINE</div><h2>開催概要</h2><div class="tbl"><table><tr><th>日時</th><td>2024年7月20日（土）　14:00〜17:00</td></tr><tr><th>会場</th><td>芝浦工業大学 豊洲キャンパス</td></tr><tr><th>定員</th><td>60名</td></tr><tr><th>参加費</th><td>1,000円</td></tr><tr><th>主催</th><td>大学リーダーシップ研究会</td></tr><tr><th>共催</th><td>理工学教育共同利用拠点（芝浦工業大学 教育イノベーション推進センター）</td></tr><tr><th>参加者</th><td>79名（一般参加68名／主催・事務局9名／登壇者2名。7月20日・21日の2日間通算）</td></tr></table></div><p style="font-size:13px;color:var(--gray);margin-top:12px">参加者数は、研究会が保有する第1〜9回の統合参加者データ（v13）にもとづく集計です。申込記録を基礎としているため、当日の実数とは若干の差がありえます。</p></section>
 <section><div class="eyebrow">PROGRAM</div><h2>登壇者とプログラム</h2><ul class="speakers"><li><span class='role'>基調講演</span><div><div class='name'>小林 浩</div><div class='aff'>リクルート進学総研 所長・カレッジマネジメント編集長</div><div class='talk'>「淘汰時代の大学生き残り戦略〜社会環境の変化と大学への期待〜」</div></div></li><li><span class='role'>特別講演</span><div><div class='name'>大森 昭生</div><div class='aff'>共愛学園前橋国際大学・短期大学部 学長</div><div class='talk'>「ビジョンを共有する組織文化の作り方？〜ちょっと痛みを伴うかも・・・」</div></div></li><li><span class='role'>特別講演</span><div><div class='name'>橋本 堅次郎</div><div class='aff'>日本文理大学 学長</div><div class='talk'>「実務家出身教員から見た大学〜組織を整え、前に進む〜」</div></div></li><li><span class='role'>グループ討議・Q&amp;A</span><div><div class='name'>参加者全員</div></div></li></ul></section>
 <section><div class="eyebrow">REPORT</div><h2>開催報告</h2><h3>講演から</h3><p>小林氏は、18歳人口の減少と大学数の増加により大学間競争が激化している現状を直視し、各大学の個性化・差別化の必要性を訴えました。「何を教えるか」から「学生が何ができるようになるか」への視点の転換、ミッション・ビジョン・バリューの明確化と社会への浸透、当事者意識を持った職員の役割が強調されました。</p><p>大森学長は、「地域の未来を私が作る」というビジョンのもとでのカリキュラム改編、「共愛12の力」による学生の成長の可視化、「スタッフ会議」の導入による教職員意識の変革など、痛みを伴う組織文化の変革を10年の長期的視点で段階的に進めてきた経験を語りました。</p><p>橋本学長は、民間企業での経験を活かし、タコつぼ化や個人主義的な教員文化を改善するための方法論、リーダーが「センター」「ウィズ」「アウト」の3つの立ち位置を使い分けること、MBWA（Management By Wandering Around）の重要性を示しました。</p><h3>グループ討議から</h3><p>職員の役割、ビジョン・ミッションの共有、大学の個性化、18歳人口減少への対応などが議論されました。文部科学省私学振興課長の板倉寛氏からは、大学教育の社会的価値の発信や私立大学の公共性の認識など、国家レベルでの取り組みの重要性が指摘されました。</p></section>
-<section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><ul class="quotes"><li>参加者の8割近くが「大変満足」と回答</li><li>「自分の大学の生き残りではなく、大学教育そのもの、学生が学ぶための場をどう残していくかのPhaseになりつつある」という認識</li><li>「全学の動きが遅く、予定調和の中で物事が決まっていく大学が多い」という指摘</li></ul></section>
+<section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><p>危機感の共有と、トップだけでなくミドルから動くことへの言及が中心です。一方で、トップが替わらなければ組織文化は変わらないのではないかという受け止めも記されています。</p><div class="tbl" style="max-width:460px"><table class="stats"><tr class="total"><th>研究会全体の満足度</th><td>4.79</td></tr><tr><th>基調講演　小林 浩 氏</th><td>4.68</td></tr><tr><th>特別講演　大森 昭生</th><td>4.79</td></tr><tr><th>特別講演2　橋本 堅次郎</th><td>4.74</td></tr><tr><th>グループ討議</th><td>4.33</td></tr><tr><th>質疑応答</th><td>4.38</td></tr><tr><th>仕事との関連性・有用性</th><td>4.54</td></tr></table></div><ul class="quotes"><li>リーダーの立場からも、試行錯誤して取り組まれていることを実感でき、課員だから何も動かせないと諦める必要はないと感じた。（大学職員）</li><li>少人数且つ短期間で実行すべきことと、時間をかけても全体の合意を得て進めることを見分け、改革を進めることが肝心。（大学職員・事務部長）</li><li>改革が進んでいる大学ではトップの先生方がミドル以下との対話を大事にしていると感じました。（大学職員）</li></ul><p style="font-size:13px;color:var(--gray);margin-top:12px">参加者アンケートの回答は39件（回答率49.4%）です。満足度は5段階で、数値が大きいほど高い評価を示します。</p></section>
 <section><div class="eyebrow">MATERIALS</div><h2>資料</h2><ul class="mats"><li><span class='k'>配布資料</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>発言録</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>アンケート結果</span><span>参加者向けに共有しています（掲載準備中）</span></li></ul><p style='font-size:13px;color:var(--gray)'>本研究会はJSPS科研費 基盤研究(C)「教学マネジメントにおける学部長等のミドルリーダーシップ研究」（研究代表者：山本啓一）の助成を受けて開催しました。</p></section>
 <div class='meta' style='margin-top:48px'><a href='4th.html'>← 第4回公開研究会</a><a href='ws2024.html'>ミドルリーダー研修 →</a></div>
 <footer class="site">

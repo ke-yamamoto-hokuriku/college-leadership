@@ -81,10 +81,16 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .mats li{display:flex;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 .mats .k{width:9em;flex:none;color:var(--gray)}
 .mats .pending{color:var(--shu);font-weight:500}
-.stats{width:auto;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.stats{width:100%;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
 .stats th{width:auto;text-align:left}
 .stats td{text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
 .stats tr.total th,.stats tr.total td{background:var(--th);color:var(--ai-deep)}
+.trend th{width:auto;white-space:nowrap}
+.trend tr:first-child th{background:var(--th);text-align:left}
+.trend td{text-align:right;font-variant-numeric:tabular-nums}
+.trend tr:first-child th:nth-child(n+3){text-align:right}
+.trend td:nth-child(2){text-align:left;white-space:nowrap}
+.trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
 footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
@@ -139,7 +145,7 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 <section><div class="eyebrow">OUTLINE</div><h2>開催概要</h2><div class="tbl"><table><tr><th>日時</th><td>2022年7月9日（土）　13:30〜16:00</td></tr><tr><th>会場</th><td>アルカディア市ヶ谷 私学会館 5階（穂高）</td></tr><tr><th>定員</th><td>90名</td></tr><tr><th>参加費</th><td>2,000円</td></tr><tr><th>主催</th><td>大学リーダーシップ研究会</td></tr><tr><th>共催</th><td>協賛：学校法人河合塾、株式会社リアセック、株式会社内田洋行、株式会社シンクアップ、株式会社Prima Pinguino</td></tr><tr><th>参加者</th><td>124名（一般参加112名／主催・事務局7名／登壇者5名）</td></tr></table></div><p style="font-size:13px;color:var(--gray);margin-top:12px">参加者数は、研究会が保有する第1〜9回の統合参加者データ（v13）にもとづく集計です。申込記録を基礎としているため、当日の実数とは若干の差がありえます。</p></section>
 <section><div class="eyebrow">PROGRAM</div><h2>登壇者とプログラム</h2><ul class="speakers"><li><span class='role'>基調講演</span><div><div class='name'>大森 昭生</div><div class='aff'>共愛学園前橋国際大学 学長</div><div class='talk'>「学長たちはなぜ無名大学の学長を選んだのか」</div></div></li><li><span class='role'>特別講演</span><div><div class='name'>両角 亜希子</div><div class='aff'>東京大学大学院教育学研究科 大学経営・政策コース 教授</div><div class='talk'>「望ましい学長リーダーシップとは」</div></div></li><li><span class='role'>パネルディスカッション</span><div><div class='name'>青山 貴子（山梨学院大学 学長）・杉本 義行（成城大学 学長）・森 朋子（桐蔭横浜大学 学長）・森 正美（京都文教大学 学長）・大森 昭生・両角 亜希子</div><div class='aff'>コーディネーター：成田 秀夫（山梨学院大学 学習・教育開発センター長）</div></div></li></ul></section>
 <section><div class="eyebrow">REPORT</div><h2>開催報告</h2><h3>研究会から</h3><p>パネリストの方々からは、それぞれの大学の取組事例、学長としての考え方・価値観、リーダーシップの発揮の方法についてお話しいただきました。「ど真ん中に学生を置く」という理念や、「積極的な妥協」「ゆっくり急ぐ」といった実践的アプローチは、多くの共感を得ました。カリスマ的なリーダーシップではなく、対話と共感を基盤とした新しいリーダーシップモデルへの気づきが得られています。</p></section>
-<section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><ul class="quotes"><li>最も評価された点は、実践的なリーダーシップの具体像が示されたこと</li><li>トップリーダーに求められる資質として「ストーリーテラー」としてのビジョン構築・共有能力、対話と傾聴の力、「積極的な妥協」を実践するバランス感覚</li><li>教授会との関係構築、世代間ギャップの克服、理事会との関係調整が実践的課題として指摘された</li></ul></section>
+<section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><p>学長という職の実像が見えたことへの言及が最も多く、「学長職の困難を言語化できた」という趣旨の記述が複数ありました。登壇した学長全員が学生中心を語ったことへの驚きと共感も目立ちます。一方、パネルディスカッションの登壇者が多く一人あたりの時間が短かったという指摘が複数あり、評価（4.20）とも一致しています。</p><div class="tbl" style="max-width:460px"><table class="stats"><tr class="total"><th>研究会全体の満足度</th><td>4.65</td></tr><tr><th>基調講演</th><td>4.50</td></tr><tr><th>特別講演</th><td>4.44</td></tr><tr><th>パネルディスカッション</th><td>4.20</td></tr><tr><th>仕事との関連性・有用性</th><td>4.56</td></tr></table></div><ul class="quotes"><li>学長職の困難を言語化できた。</li><li>学長先生全員が「学生中心」という話をされたこと。これまでの高等教育機関にはなかった大きな流れが生まれていることを感じました。</li><li>今回のようなテーマを皆で議論していいんだ、ということを初めて実感でき、とても勇気づけられました。</li></ul><p style="font-size:13px;color:var(--gray);margin-top:12px">参加者アンケートの回答は57件（回答率46.0%）です。満足度は5段階で、数値が大きいほど高い評価を示します。</p></section>
 <section><div class="eyebrow">MATERIALS</div><h2>資料</h2><ul class="mats"><li><span class='k'>配布資料</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>発言録</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>アンケート結果</span><span>参加者向けに共有しています（掲載準備中）</span></li></ul></section>
 <div class='meta' style='margin-top:48px'><a href='1st.html'>← 第1回公開研究会</a><a href='3rd.html'>第3回公開研究会 →</a></div>
 <footer class="site">

@@ -82,10 +82,16 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .mats li{display:flex;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 .mats .k{width:9em;flex:none;color:var(--gray)}
 .mats .pending{color:var(--shu);font-weight:500}
-.stats{width:auto;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.stats{width:100%;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
 .stats th{width:auto;text-align:left}
 .stats td{text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
 .stats tr.total th,.stats tr.total td{background:var(--th);color:var(--ai-deep)}
+.trend th{width:auto;white-space:nowrap}
+.trend tr:first-child th{background:var(--th);text-align:left}
+.trend td{text-align:right;font-variant-numeric:tabular-nums}
+.trend tr:first-child th:nth-child(n+3){text-align:right}
+.trend td:nth-child(2){text-align:left;white-space:nowrap}
+.trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
 footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
@@ -183,6 +189,12 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 <div><h3>発起人</h3><ul class="founders"><li><b>大森 昭生</b>共愛学園前橋国際大学 学長</li><li><b>成田 秀夫</b>日本文理大学 客員教授</li><li><b>吉村 充功</b>日本文理大学 副学長</li><li><b>山本 啓一</b>北陸大学 経済経営学部 教授</li></ul></div>
 <div><h3>科学研究費助成事業</h3><ul class="kaken"><li>2025〜2027年度　「ダイナミックな教学マネジメント体制の構築〜ミドル教職員の育成と組織開発に向けて」（研究代表者：山本啓一）<span class=num>25K06382</span></li><li>2022〜2024年度　「教学マネジメントにおける学部長等のミドルリーダーシップ研究」（研究代表者：山本啓一）<span class=num>22K02698</span></li></ul><p style="font-size:13px;color:var(--gray)">JSPS科研費 基盤研究(C)。公開研究会は本研究の一環として開催しています。</p></div>
 </div>
+<h3>参加者アンケートの推移</h3>
+<div class="tbl" style="max-width:620px"><table class="trend">
+<tr><th>回</th><th>開催</th><th>回答数</th><th>全体の満足度</th><th>仕事との関連性</th></tr>
+<tr><th>第2回</th><td>2022年7月</td><td>57</td><td>4.65</td><td>4.56</td></tr><tr><th>第3回</th><td>2023年2月</td><td>18</td><td>4.72</td><td>4.67</td></tr><tr><th>第4回</th><td>2023年7月</td><td>36</td><td>4.64</td><td>4.75</td></tr><tr><th>第5回</th><td>2024年7月</td><td>39</td><td>4.79</td><td>4.54</td></tr><tr><th>第6回</th><td>2025年2月</td><td>37</td><td>4.65</td><td>4.59</td></tr><tr><th>第7回</th><td>2025年7月</td><td>36</td><td>4.69</td><td>4.61</td></tr><tr><th>第8回</th><td>2026年3月</td><td>28</td><td>4.68</td><td>4.68</td></tr><tr><th>第9回</th><td>2026年7月</td><td>26</td><td>4.46</td><td>4.38</td></tr>
+</table></div>
+<p style="font-size:13px;color:var(--gray);margin-top:12px;max-width:680px;line-height:1.8">第1回はアンケートを実施していません。「研究会全体の満足度」と「仕事との関連性・有用性」は、第2回から第9回まで設問の文言が同一のため、横に並べて比べられます。セッション別の評価は回ごとに項目が異なるため、各回のページに掲載しています。いずれも5段階です。</p>
 <h3>刊行物</h3><ul class="pubs"><li class="nocover"><div><div class="t">「学部長による教学マネジメントの認識とその構造」</div><div class="d">石川勝彦・山本啓一ほか　『北陸大学紀要』第60号、2025年</div></div></li><li><div class="cover"><img src="images/book2018.jpg" alt="『今選ぶなら、地方小規模私立大学！〜偏差値による進路選択からの脱却〜』 書影" loading="lazy"></div><div><div class="t">『今選ぶなら、地方小規模私立大学！〜偏差値による進路選択からの脱却〜』</div><div class="d">編著・報告：大森昭生（共愛学園前橋国際大学）、成田秀夫（河合文化教育研究所）、山本啓一（北陸大学）、吉村充功（日本文理大学）。特別対談：中原淳（立教大学 教授）。レゾンクリエイト、2018年</div></div></li></ul>
 <h3>関連する登壇・企画</h3><ul class="mats"><li><span class='k'>2026年6月4日</span><span>New Education Expo 2026（東京）に発起人4名で登壇</span></li><li><span class='k'>2023年6月1日・10日</span><span>New Education Expo 2023 において「教学マネジメント構築とミドルリーダーシップの重要性」をテーマに登壇</span></li><li><span class='k'>2023年3月16日</span><span>第29回大学教育研究フォーラム 参加者企画セッション「教学マネジメントにおける大学教員のミドルリーダーシップ」を開催</span></li></ul>
 </section>
