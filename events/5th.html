@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第5回公開研究会｜大学リーダーシップ研究会</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"><style>
+:root{
+  --ai:#22406b; --ai-deep:#16304f; --shu:#b14a3a; --ink:#16202c; --gray:#66717f;
+  --paper:#f7f8f8; --panel:#ffffff; --line:#dfe3e8; --rule:#22406b; --th:#eef1f5; --band:#1c2b45; --onband:#f4f6fa; --onband-dim:#b7c3d6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ai:#8fb0e0; --ai-deep:#e6e9ee; --shu:#e08a7c; --ink:#e6e9ee; --gray:#98a3b3;
+    --paper:#0e141c; --panel:#161e29; --line:#2a3542; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
+  }
+}
+:root[data-theme="dark"]{
+  --ai:#8fb0e0; --ai-deep:#e6e9ee; --shu:#e08a7c; --ink:#e6e9ee; --gray:#98a3b3;
+  --paper:#0e141c; --panel:#161e29; --line:#2a3542; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:light dark}
+body{background:var(--paper);color:var(--ink);font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;line-height:1.85;font-size:16px;font-feature-settings:"palt"}
+a{color:var(--ai);text-decoration:underline;text-underline-offset:.22em;text-decoration-thickness:1px}
+a:hover{color:var(--shu)}
+a:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding-block:0 96px;padding-inline:24px}
+@media(max-width:480px){.wrap{padding-inline:16px}}
+header.site{background:var(--band);color:var(--onband);margin:0 -24px 48px;padding:22px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+@media(max-width:480px){header.site{margin-inline:-16px;padding-inline:16px}}
+header.site .mon{color:var(--onband);flex:none}
+header.site .name{font-size:19px;font-weight:700;letter-spacing:.04em;line-height:1.3}
+header.site .name a{color:inherit;text-decoration:none}
+header.site .en{font-size:11px;letter-spacing:.22em;color:var(--onband-dim);margin-top:2px;font-weight:500}
+header.site nav{margin-left:auto;display:flex;gap:22px;font-size:13px;font-weight:500}
+header.site nav a{text-decoration:none;color:var(--onband-dim)}
+header.site nav a:hover{color:var(--onband)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin-bottom:10px}
+h1{font-size:34px;font-weight:700;letter-spacing:.01em;line-height:1.45;color:var(--ai-deep);text-wrap:balance}
+h1 .sub{display:block;font-size:17px;font-weight:500;letter-spacing:.02em;color:var(--gray);margin-top:8px}
+section{margin-bottom:64px}
+h2{font-size:20px;font-weight:700;letter-spacing:.02em;color:var(--ai-deep);margin-bottom:22px;padding-bottom:10px;border-bottom:2px solid var(--rule);line-height:1.5}
+h3{font-size:16px;font-weight:700;color:var(--ai-deep);margin:26px 0 10px}
+p{max-width:680px;margin-bottom:14px}
+.lead p{font-size:16px}
+.meta{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:13px;color:var(--gray);margin:16px 0 36px;font-variant-numeric:tabular-nums}
+.meta b{color:var(--ink);font-weight:700;font-size:15px;margin-left:.3em}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top;background:var(--panel)}
+th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(--gray)}
+.tbl{overflow-x:auto;max-width:720px;border:1px solid var(--line);border-radius:4px}
+/* archive list */
+.archive{list-style:none;border-top:1px solid var(--line)}
+.archive li{display:grid;grid-template-columns:11em 1fr;gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.archive .when{font-size:13px;color:var(--gray);font-variant-numeric:tabular-nums;line-height:1.7}
+.archive .when b{display:inline-block;color:var(--onband);background:var(--ai);font-weight:700;letter-spacing:.12em;font-size:11px;padding:2px 8px;border-radius:3px;margin-bottom:6px}
+.archive .what a{font-size:17px;font-weight:700;text-decoration:none;color:var(--ai-deep);line-height:1.5}
+.archive .what a:hover{color:var(--shu)}
+.archive .what .sub{font-size:13px;color:var(--gray);margin-top:2px}
+.archive .what .who{font-size:13px;color:var(--gray);margin-top:6px}
+.archive .what .num{font-size:12px;color:var(--shu);font-weight:500;margin-top:4px}
+@media(max-width:560px){.archive li{grid-template-columns:1fr}}
+/* speakers */
+.speakers{list-style:none}
+.speakers li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:10em 1fr;gap:4px 18px}
+.speakers li:first-child{border-top:1px solid var(--line)}
+.speakers .role{font-size:12px;color:var(--shu);font-weight:700;letter-spacing:.08em;padding-top:4px}
+.speakers .name{font-weight:700;color:var(--ai-deep)}
+.speakers .aff{font-size:13px;color:var(--gray)}
+.speakers .talk{font-size:14px;margin-top:2px}
+@media(max-width:560px){.speakers li{grid-template-columns:1fr}}
+.quotes{list-style:none;max-width:680px}
+.quotes li{padding:8px 0 8px 16px;border-left:3px solid var(--ai);margin-bottom:8px;font-size:14px;background:var(--panel)}
+.note{font-size:13px;color:var(--gray);border:1px solid var(--line);background:var(--panel);padding:14px 18px;max-width:680px;border-radius:4px}
+.note.hot{border-left:3px solid var(--shu)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
+@media(max-width:640px){.cols{grid-template-columns:1fr}}
+.founders{list-style:none}
+.founders li{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.founders li b{font-weight:700;color:var(--ai-deep);margin-right:.6em}
+.kaken{font-size:14px;max-width:680px}
+.kaken li{margin-bottom:8px;list-style:none;padding-left:0}
+.kaken .num{color:var(--gray);font-size:12px;letter-spacing:.06em;margin-left:.6em}
+.mats{list-style:none;max-width:680px}
+.mats li{display:flex;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.mats .k{width:9em;flex:none;color:var(--gray)}
+.mats .pending{color:var(--shu);font-weight:500}
+.stats{width:auto;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.stats th{width:auto;text-align:left}
+.stats td{text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
+.stats tr.total th,.stats tr.total td{background:var(--th);color:var(--ai-deep)}
+footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
+footer.site .mon{color:var(--ai);float:right;margin-left:20px}
+.back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
+/* publications with covers */
+.pubs{list-style:none;display:grid;gap:22px;max-width:680px}
+.pubs li{display:grid;grid-template-columns:92px 1fr;gap:18px;align-items:start}
+.pubs li.nocover{grid-template-columns:1fr}
+.pubs .cover img{width:100%;display:block;border:1px solid var(--line);border-radius:2px}
+.pubs .t{font-weight:700;color:var(--ai-deep);font-size:15px;line-height:1.6}
+.pubs .d{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.7}
+.evcover{max-width:170px;margin:0 0 36px}
+.evcover img{width:100%;display:block;border:1px solid var(--line);border-radius:2px}
+.evcover figcaption{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.6}
+/* photos */
+.ph{margin:0}
+.ph img,.ph .ph-empty{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--th);border-radius:4px;max-width:100%}
+.ph .ph-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gray);border:1px dashed var(--line);gap:4px}
+.ph .ph-empty span{font-weight:700;letter-spacing:.2em;font-size:13px}
+.ph .ph-empty small{font-size:11px;opacity:.8}
+.ph figcaption{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.6}
+.hero{margin:-48px -24px 48px;position:relative}
+@media(max-width:480px){.hero{margin-inline:-16px}}
+.hero .ph img,.hero .ph .ph-empty{aspect-ratio:2/1;border-radius:0;object-position:50% 68%}
+@media(max-width:640px){.hero .ph img,.hero .ph .ph-empty{aspect-ratio:4/3}}
+.hero .ph figcaption{padding-inline:24px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 24px}
+.gallery.about{grid-template-columns:1fr 1fr;margin-bottom:32px}
+.gallery .ph:first-child:nth-last-child(1){grid-column:1/-1}
+.gallery .ph:first-child:nth-last-child(1) img,.gallery .ph:first-child:nth-last-child(1) .ph-empty{aspect-ratio:16/9}
+@media(max-width:640px){.gallery{grid-template-columns:1fr 1fr}}
+.archive li{grid-template-columns:11em 1fr 160px}
+.archive .thumb .ph img,.archive .thumb .ph .ph-empty{aspect-ratio:3/2}
+.archive .thumb .ph figcaption{display:none}
+@media(max-width:700px){.archive li{grid-template-columns:1fr}.archive .thumb{max-width:280px}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style></head><body>
+<div class="wrap">
+<header class="site">
+  <div><div class="name"><a href="../index.html">大学リーダーシップ研究会</a></div><div class="en">COLLEGE LEADERSHIP FORUM</div></div>
+  <nav><a href="../index.html#archive">研究会一覧</a><a href="../index.html#about">研究会について</a><a href="../index.html#contact">事務局</a></nav>
+</header>
+<a class="back" href="../index.html#archive">← 研究会一覧</a>
+<section class="lead">
+<div class="eyebrow">FORUM 05 · 2024-07-20</div>
+<h1>淘汰の時代における大学の生き残りと変革に向かうリーダーシップ</h1>
+<div class="meta"><span>第5回公開研究会</span><span>2024年7月20日（土）</span><span>芝浦工業大学 豊洲キャンパス</span></div>
+<p>大学淘汰の時代が本格的に到来した現在、大学を取り巻く状況にはどのような問題や課題が存在するでしょうか。大学の生き残りと付加価値の高い教育をどう両立させていけばよいのかをテーマに基調講演・特別講演を行い、「今、大学が本当にやらなければならないこと」について議論しました。翌21日にはミドルリーダー研修を実施しました。</p>
+
+</section>
+<div class="gallery"><figure class="ph"><img src="../images/5th_1.jpg" alt="基調講演「淘汰時代の大学生き残り戦略」（小林浩氏）" loading="lazy"><figcaption>基調講演「淘汰時代の大学生き残り戦略」（小林浩氏）</figcaption></figure><figure class="ph"><img src="../images/5th_2.jpg" alt="グループ討議" loading="lazy"><figcaption>グループ討議</figcaption></figure><figure class="ph"><img src="../images/5th_3.jpg" alt="Q&amp;Aセッション" loading="lazy"><figcaption>Q&amp;Aセッション</figcaption></figure></div>
+
+<section><div class="eyebrow">OUTLINE</div><h2>開催概要</h2><div class="tbl"><table><tr><th>日時</th><td>2024年7月20日（土）　14:00〜17:00</td></tr><tr><th>会場</th><td>芝浦工業大学 豊洲キャンパス</td></tr><tr><th>定員</th><td>60名</td></tr><tr><th>参加費</th><td>1,000円</td></tr><tr><th>主催</th><td>大学リーダーシップ研究会</td></tr><tr><th>共催</th><td>理工学教育共同利用拠点（芝浦工業大学 教育イノベーション推進センター）</td></tr><tr><th>参加者</th><td>79名（一般参加68名／主催・事務局9名／登壇者2名。7月20日・21日の2日間通算）</td></tr></table></div><p style="font-size:13px;color:var(--gray);margin-top:12px">参加者数は、研究会が保有する第1〜9回の統合参加者データ（v13）にもとづく集計です。申込記録を基礎としているため、当日の実数とは若干の差がありえます。</p></section>
+<section><div class="eyebrow">PROGRAM</div><h2>登壇者とプログラム</h2><ul class="speakers"><li><span class='role'>基調講演</span><div><div class='name'>小林 浩</div><div class='aff'>リクルート進学総研 所長・カレッジマネジメント編集長</div><div class='talk'>「淘汰時代の大学生き残り戦略〜社会環境の変化と大学への期待〜」</div></div></li><li><span class='role'>特別講演</span><div><div class='name'>大森 昭生</div><div class='aff'>共愛学園前橋国際大学・短期大学部 学長</div><div class='talk'>「ビジョンを共有する組織文化の作り方？〜ちょっと痛みを伴うかも・・・」</div></div></li><li><span class='role'>特別講演</span><div><div class='name'>橋本 堅次郎</div><div class='aff'>日本文理大学 学長</div><div class='talk'>「実務家出身教員から見た大学〜組織を整え、前に進む〜」</div></div></li><li><span class='role'>グループ討議・Q&amp;A</span><div><div class='name'>参加者全員</div></div></li></ul></section>
+<section><div class="eyebrow">REPORT</div><h2>開催報告</h2><h3>講演から</h3><p>小林氏は、18歳人口の減少と大学数の増加により大学間競争が激化している現状を直視し、各大学の個性化・差別化の必要性を訴えました。「何を教えるか」から「学生が何ができるようになるか」への視点の転換、ミッション・ビジョン・バリューの明確化と社会への浸透、当事者意識を持った職員の役割が強調されました。</p><p>大森学長は、「地域の未来を私が作る」というビジョンのもとでのカリキュラム改編、「共愛12の力」による学生の成長の可視化、「スタッフ会議」の導入による教職員意識の変革など、痛みを伴う組織文化の変革を10年の長期的視点で段階的に進めてきた経験を語りました。</p><p>橋本学長は、民間企業での経験を活かし、タコつぼ化や個人主義的な教員文化を改善するための方法論、リーダーが「センター」「ウィズ」「アウト」の3つの立ち位置を使い分けること、MBWA（Management By Wandering Around）の重要性を示しました。</p><h3>グループ討議から</h3><p>職員の役割、ビジョン・ミッションの共有、大学の個性化、18歳人口減少への対応などが議論されました。文部科学省私学振興課長の板倉寛氏からは、大学教育の社会的価値の発信や私立大学の公共性の認識など、国家レベルでの取り組みの重要性が指摘されました。</p></section>
+<section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><ul class="quotes"><li>参加者の8割近くが「大変満足」と回答</li><li>「自分の大学の生き残りではなく、大学教育そのもの、学生が学ぶための場をどう残していくかのPhaseになりつつある」という認識</li><li>「全学の動きが遅く、予定調和の中で物事が決まっていく大学が多い」という指摘</li></ul></section>
+<section><div class="eyebrow">MATERIALS</div><h2>資料</h2><ul class="mats"><li><span class='k'>配布資料</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>発言録</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>アンケート結果</span><span>参加者向けに共有しています（掲載準備中）</span></li></ul><p style='font-size:13px;color:var(--gray)'>本研究会はJSPS科研費 基盤研究(C)「教学マネジメントにおける学部長等のミドルリーダーシップ研究」（研究代表者：山本啓一）の助成を受けて開催しました。</p></section>
+<div class='meta' style='margin-top:48px'><a href='4th.html'>← 第4回公開研究会</a><a href='ws2024.html'>ミドルリーダー研修 →</a></div>
+<footer class="site">
+  <div>大学リーダーシップ研究会事務局<br>京都府京都市北区紫野北花ノ坊町96 佛教大学キャンパス内（水谷俊之）<br>toshimiz@bukkyo-u.ac.jp ／ ke-yamamoto@hokuriku-u.ac.jp（山本）</div>
+  <div style="margin-top:10px">© 大学リーダーシップ研究会 — College Leadership Forum</div>
+</footer>
+</div></body></html>
