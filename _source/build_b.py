@@ -37,7 +37,7 @@ CSS = """
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{color-scheme:light dark}
-body{background:var(--paper);color:var(--ink);font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;line-height:1.85;font-size:16px;font-feature-settings:"palt"}
+body{background:var(--paper);color:var(--ink);font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;line-height:1.85;font-size:17px;font-feature-settings:"palt"}
 a{color:var(--ai);text-decoration:underline;text-underline-offset:.22em;text-decoration-thickness:1px}
 a:hover{color:var(--shu)}
 a:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
@@ -46,65 +46,73 @@ a:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
 header.site{background:var(--band);color:var(--onband);margin:0 -24px 48px;padding:22px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 @media(max-width:480px){header.site{margin-inline:-16px;padding-inline:16px}}
 header.site .mon{color:var(--onband);flex:none}
-header.site .name{font-size:19px;font-weight:700;letter-spacing:.04em;line-height:1.3}
+header.site .name{font-size:20px;font-weight:700;letter-spacing:.04em;line-height:1.3}
 header.site .name a{color:inherit;text-decoration:none}
 header.site .en{font-size:11px;letter-spacing:.22em;color:var(--onband-dim);margin-top:2px;font-weight:500}
-header.site nav{margin-left:auto;display:flex;gap:22px;font-size:13px;font-weight:500}
-header.site nav a{text-decoration:none;color:var(--onband-dim)}
+header.site nav{margin-left:auto;display:flex;gap:22px;font-size:14px;font-weight:500}
+header.site nav a{text-decoration:none;color:var(--onband-dim);display:flex;align-items:center;gap:6px}
+header.site nav svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
 header.site nav a:hover{color:var(--onband)}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin-bottom:10px}
-h1{font-size:34px;font-weight:700;letter-spacing:.01em;line-height:1.45;color:var(--ai-deep);text-wrap:balance}
-h1 .sub{display:block;font-size:17px;font-weight:500;letter-spacing:.02em;color:var(--gray);margin-top:8px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin-bottom:10px}
+h1{font-size:36px;font-weight:700;letter-spacing:.01em;line-height:1.45;color:var(--ai-deep);text-wrap:balance}
+h1 .sub{display:block;font-size:18px;font-weight:500;letter-spacing:.02em;color:var(--gray);margin-top:8px}
 section{margin-bottom:64px}
-h2{font-size:20px;font-weight:700;letter-spacing:.02em;color:var(--ai-deep);margin-bottom:22px;padding-bottom:10px;border-bottom:2px solid var(--rule);line-height:1.5}
-h3{font-size:16px;font-weight:700;color:var(--ai-deep);margin:26px 0 10px}
+h2{font-size:22px;font-weight:700;letter-spacing:.02em;color:var(--ai-deep);margin-bottom:22px;padding-bottom:10px;border-bottom:2px solid var(--rule);line-height:1.5}
+h3{font-size:17px;font-weight:700;color:var(--ai-deep);margin:26px 0 10px}
 p{max-width:680px;margin-bottom:14px}
-.lead p{font-size:16px}
-.meta{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:13px;color:var(--gray);margin:16px 0 36px;font-variant-numeric:tabular-nums}
-.meta b{color:var(--ink);font-weight:700;font-size:15px;margin-left:.3em}
-table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.lead p{font-size:17px}
+.meta{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:14px;color:var(--gray);margin:16px 0 36px;font-variant-numeric:tabular-nums}
+.meta b{color:var(--ink);font-weight:700;font-size:16px;margin-left:.3em}
+table{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
 th,td{border-bottom:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top;background:var(--panel)}
 th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(--gray)}
 .tbl{overflow-x:auto;max-width:720px;border:1px solid var(--line);border-radius:4px}
 /* archive list */
 .archive{list-style:none;border-top:1px solid var(--line)}
 .archive li{display:grid;grid-template-columns:11em 1fr;gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
-.archive .when{font-size:13px;color:var(--gray);font-variant-numeric:tabular-nums;line-height:1.7}
-.archive .when b{display:inline-block;color:var(--onband);background:var(--ai);font-weight:700;letter-spacing:.12em;font-size:11px;padding:2px 8px;border-radius:3px;margin-bottom:6px}
-.archive .what a{font-size:17px;font-weight:700;text-decoration:none;color:var(--ai-deep);line-height:1.5}
+.archive .when{font-size:14px;color:var(--gray);font-variant-numeric:tabular-nums;line-height:1.7}
+.archive .when b{display:inline-block;color:var(--onband);background:var(--ai);font-weight:700;letter-spacing:.12em;font-size:12px;padding:2px 8px;border-radius:3px;margin-bottom:6px}
+.archive .what a{font-size:18px;font-weight:700;text-decoration:none;color:var(--ai-deep);line-height:1.5}
 .archive .what a:hover{color:var(--shu)}
-.archive .what .sub{font-size:13px;color:var(--gray);margin-top:2px}
-.archive .what .who{font-size:13px;color:var(--gray);margin-top:6px}
-.archive .what .num{font-size:12px;color:var(--shu);font-weight:500;margin-top:4px}
+.archive .what .sub{font-size:14px;color:var(--gray);margin-top:2px}
+.archive .what .who{font-size:14px;color:var(--gray);margin-top:6px}
+.archive .what .num{font-size:13px;color:var(--shu);font-weight:500;margin-top:4px}
 @media(max-width:560px){.archive li{grid-template-columns:1fr}}
 /* speakers */
 .speakers{list-style:none}
 .speakers li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:10em 1fr;gap:4px 18px}
 .speakers li:first-child{border-top:1px solid var(--line)}
-.speakers .role{font-size:12px;color:var(--shu);font-weight:700;letter-spacing:.08em;padding-top:4px}
+.speakers .role{font-size:13px;color:var(--shu);font-weight:700;letter-spacing:.08em;padding-top:4px}
 .speakers .name{font-weight:700;color:var(--ai-deep)}
-.speakers .aff{font-size:13px;color:var(--gray)}
-.speakers .talk{font-size:14px;margin-top:2px}
+.speakers .aff{font-size:14px;color:var(--gray)}
+.speakers .talk{font-size:15px;margin-top:2px}
 @media(max-width:560px){.speakers li{grid-template-columns:1fr}}
 .quotes{list-style:none;max-width:680px}
-.quotes li{padding:8px 0 8px 16px;border-left:3px solid var(--ai);margin-bottom:8px;font-size:14px;background:var(--panel)}
-.note{font-size:13px;color:var(--gray);border:1px solid var(--line);background:var(--panel);padding:14px 18px;max-width:680px;border-radius:4px}
+.quotes li{padding:10px 0 10px 16px;border-left:3px solid var(--ai);margin-bottom:8px;font-size:15px;background:var(--panel)}
+.note{font-size:14px;color:var(--gray);border:1px solid var(--line);background:var(--panel);padding:14px 18px;max-width:680px;border-radius:4px}
 .note.hot{border-left:3px solid var(--shu)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
 @media(max-width:640px){.cols{grid-template-columns:1fr}}
 .founders{list-style:none}
-.founders li{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.founders li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
 .founders li b{font-weight:700;color:var(--ai-deep);margin-right:.6em}
-.kaken{font-size:14px;max-width:680px}
+.kaken{font-size:15px;max-width:680px}
 .kaken li{margin-bottom:8px;list-style:none;padding-left:0}
-.kaken .num{color:var(--gray);font-size:12px;letter-spacing:.06em;margin-left:.6em}
+.kaken .num{color:var(--gray);font-size:13px;letter-spacing:.06em;margin-left:.6em}
 .mats{list-style:none;max-width:680px}
-.mats li{display:flex;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.mats li{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
 .mats .k{width:9em;flex:none;color:var(--gray)}
 .mats .pending{color:var(--shu);font-weight:500}
-.stats{width:100%;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
-.stats th{width:auto;text-align:left}
-.stats td{text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
+.stats{width:100%;min-width:0;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;}
+.stats th{width:auto;text-align:left;font-weight:400;color:var(--ink);white-space:normal}
+.stats td.bar{width:46%;padding-left:8px;padding-right:8px}
+.stats .track{position:relative;display:block;height:9px;border-radius:5px;background:var(--th);overflow:hidden}
+.stats .track::after{content:"";position:absolute;left:80%;top:0;bottom:0;width:1px;background:var(--line)}
+.stats .fill{display:block;height:100%;border-radius:5px;background:var(--c1)}
+.stats td.v{width:5em;text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
+.stats tr.total th{font-weight:700}
+.barnote{font-size:13px;color:var(--gray);margin:10px 0 24px;line-height:1.6}
+.stats tr.total .track{background:var(--line)}
 .stats tr.total th,.stats tr.total td{background:var(--th);color:var(--ai-deep)}
 .trend th{width:auto;white-space:nowrap}
 .trend tr:first-child th{background:var(--th);text-align:left}
@@ -113,26 +121,26 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .trend td:nth-child(2){text-align:left;white-space:nowrap}
 .trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
 
-footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
+footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:14px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
-.back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
+.back{font-size:14px;margin-bottom:24px;display:inline-block;font-weight:500}
 /* publications with covers */
 .pubs{list-style:none;display:grid;gap:22px;max-width:680px}
 .pubs li{display:grid;grid-template-columns:92px 1fr;gap:18px;align-items:start}
 .pubs li.nocover{grid-template-columns:1fr}
 .pubs .cover img{width:100%;display:block;border:1px solid var(--line);border-radius:2px}
-.pubs .t{font-weight:700;color:var(--ai-deep);font-size:15px;line-height:1.6}
-.pubs .d{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.7}
+.pubs .t{font-weight:700;color:var(--ai-deep);font-size:16px;line-height:1.6}
+.pubs .d{font-size:14px;color:var(--gray);margin-top:4px;line-height:1.7}
 .evcover{max-width:170px;margin:0 0 36px}
 .evcover img{width:100%;display:block;border:1px solid var(--line);border-radius:2px}
-.evcover figcaption{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.6}
+.evcover figcaption{font-size:13px;color:var(--gray);margin-top:8px;line-height:1.6}
 /* photos */
 .ph{margin:0}
 .ph img,.ph .ph-empty{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--th);border-radius:4px;max-width:100%}
 .ph .ph-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gray);border:1px dashed var(--line);gap:4px}
 .ph .ph-empty span{font-weight:700;letter-spacing:.2em;font-size:13px}
 .ph .ph-empty small{font-size:11px;opacity:.8}
-.ph figcaption{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.6}
+.ph figcaption{font-size:13px;color:var(--gray);margin-top:8px;line-height:1.6}
 .hero{margin:-48px -24px 48px;position:relative}
 @media(max-width:480px){.hero{margin-inline:-16px}}
 .hero .ph img,.hero .ph .ph-empty{aspect-ratio:2/1;border-radius:0;object-position:50% 68%}
@@ -164,7 +172,7 @@ def photo(ph, rel="", cls="ph"):
 def header(rel=""):
     return f"""<header class="site">
   <div><div class="name"><a href="{rel}index.html">{esc(S['name'])}</a></div><div class="en">{esc(S['en'].upper())}</div></div>
-  <nav><a href="{rel}index.html#archive">研究会一覧</a><a href="{rel}index.html#about">研究会について</a><a href="{rel}index.html#contact">事務局</a></nav>
+  <nav><a href="{rel}index.html#archive"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4h8M5.5 8h8M5.5 12h8"/><path d="M2.5 4h.01M2.5 8h.01M2.5 12h.01"/></svg>研究会一覧</a><a href="{rel}index.html#about"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4"/><path d="M8 4.8h.01"/></svg>研究会について</a><a href="{rel}index.html#contact"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.8" y="3.6" width="12.4" height="8.8" rx="1.2"/><path d="M2.4 4.6 8 8.8l5.6-4.2"/></svg>事務局</a></nav>
 </header>"""
 
 def footer():
@@ -191,7 +199,7 @@ CHART_CSS = """
 /* chart */
 .chart{margin:0 0 20px;max-width:620px}
 .chart svg{display:block;width:100%;height:auto;overflow:visible}
-.chart .legend{display:flex;gap:20px;font-size:13px;color:var(--gray);margin-bottom:10px}
+.chart .legend{display:flex;gap:20px;font-size:14px;color:var(--gray);margin-bottom:10px}
 .chart .legend span{display:flex;align-items:center;gap:7px}
 .chart .legend span::before{content:"";width:14px;height:3px;border-radius:2px}
 .chart .legend .k1::before{background:var(--c1)}
@@ -207,7 +215,7 @@ CHART_CSS = """
 .chart .vl{font-size:11px;font-weight:700;font-variant-numeric:tabular-nums}
 .chart .t1{fill:var(--c1)}
 .chart .t2{fill:var(--c2)}
-.chart figcaption{font-size:12px;color:var(--gray);margin-top:10px;line-height:1.6}
+.chart figcaption{font-size:13px;color:var(--gray);margin-top:10px;line-height:1.6}
 """
 
 def trend_svg(rows):
@@ -215,7 +223,7 @@ def trend_svg(rows):
     if not rows: return ""
     W, H = 620, 250
     L, R, T, B = 44, 16, 18, 34
-    lo, hi = 4.2, 5.0
+    lo, hi = 1.0, 5.0
     n = len(rows)
     step = (W - L - R) / (n - 1)
     def X(i): return L + step * i
@@ -224,8 +232,8 @@ def trend_svg(rows):
     s2 = [float(r[4]) for r in rows]   # 仕事との関連性
     grid = "".join(
         f'<line x1="{L}" y1="{Y(v):.1f}" x2="{W-R}" y2="{Y(v):.1f}" class="g"/>'
-        f'<text x="{L-8}" y="{Y(v)+4:.1f}" class="ax" text-anchor="end">{v:.1f}</text>'
-        for v in (4.2, 4.4, 4.6, 4.8, 5.0))
+        f'<text x="{L-8}" y="{Y(v)+4:.1f}" class="ax" text-anchor="end">{v:.0f}</text>'
+        for v in (1.0, 2.0, 3.0, 4.0, 5.0))
     xlab = "".join(
         f'<text x="{X(i):.1f}" y="{H-12}" class="ax" text-anchor="middle">{esc(r[0])}</text>'
         for i, r in enumerate(rows))
@@ -252,7 +260,7 @@ def trend_svg(rows):
 {labels}
 {xlab}
 </svg>
-<figcaption>縦軸は5段階評価の平均値。見やすさのため4.2から5.0の範囲で描いています。</figcaption>
+<figcaption>縦軸は5段階評価（1＝不満足〜5＝満足）の平均値です。どの回も4.4を上回っており、回による差は小さいことが分かります。正確な数値は下の表をご覧ください。</figcaption>
 </figure>"""
 
 def index_page():
@@ -303,7 +311,7 @@ def index_page():
 <div class="gallery about">{"".join(photo(ph) for ph in S.get('about_photos',[]))}</div>
 <div class="cols">
 <div><h3>発起人</h3><ul class="founders">{founders}</ul></div>
-<div><h3>科学研究費助成事業</h3><ul class="kaken">{kaken}</ul><p style="font-size:13px;color:var(--gray)">JSPS科研費 基盤研究(C)。公開研究会は本研究の一環として開催しています。</p></div>
+<div><h3>科学研究費助成事業</h3><ul class="kaken">{kaken}</ul><p style="font-size:14px;color:var(--gray)">JSPS科研費 基盤研究(C)。公開研究会は本研究の一環として開催しています。</p></div>
 </div>
 <h3>参加者アンケートの推移</h3>
 {trend_chart}
@@ -311,7 +319,7 @@ def index_page():
 <tr><th>回</th><th>開催</th><th>回答数</th><th>全体の満足度</th><th>仕事との関連性</th></tr>
 {trend}
 </table></div>
-<p style="font-size:13px;color:var(--gray);margin-top:12px;max-width:680px;line-height:1.8">{esc(S.get('survey_trend_note',''))}</p>
+<p style="font-size:14px;color:var(--gray);margin-top:12px;max-width:680px;line-height:1.8">{esc(S.get('survey_trend_note',''))}</p>
 <h3>刊行物</h3><ul class="pubs">{pubs}</ul>
 <h3>関連する登壇・企画</h3><ul class="mats">{related}</ul>
 </section>
@@ -345,14 +353,23 @@ def event_page(e):
     stats = ""
     if st:
         TOTAL = ' class="total"'
-        rows_ = "".join('<tr%s><th>%s</th><td>%s</td></tr>' % (TOTAL if i==0 else "", esc(k), esc(v)) for i,(k,v) in enumerate(st))
-        stats = f'<div class="tbl" style="max-width:460px"><table class="stats">{rows_}</table></div>'
+        def srow(i, k, v):
+            try:
+                pct = max(0.0, min(100.0, float(v) / 5 * 100))
+                bar = (f'<span class="track"><span class="fill" style="width:{pct:.1f}%"></span></span>')
+            except ValueError:
+                bar = ""
+            return ('<tr%s><th>%s</th><td class="bar">%s</td><td class="v">%s</td></tr>'
+                    % (TOTAL if i == 0 else "", esc(k), bar, esc(v)))
+        rows_ = "".join(srow(i, k, v) for i, (k, v) in enumerate(st))
+        stats = (f'<div class="tbl" style="max-width:560px"><table class="stats">{rows_}</table></div>'
+                 f'<p class="barnote">横棒は5点満点に対する位置を示します。細い縦線は4.0の目盛りです。</p>')
     slead = f'<p>{esc(e["survey_lead"])}</p>' if e.get("survey_lead") else ""
-    note9 = f'<p style="font-size:13px;color:var(--gray);margin-top:12px">{esc(e["survey_note"])}</p>' if e.get("survey_note") else ""
+    note9 = f'<p style="font-size:14px;color:var(--gray);margin-top:12px">{esc(e["survey_note"])}</p>' if e.get("survey_note") else ""
     mlabel = {"handout":"配布資料","transcript":"発言録","survey":"アンケート結果"}
     mstate = {"available":"参加者向けに共有しています（掲載準備中）","pending":"<span class='pending'>登壇者確認後に公開</span>","none":"—"}
     mats = "".join(f"<li><span class='k'>{mlabel[k]}</span><span>{mstate[v]}</span></li>" for k,v in e["materials"].items() if v != "none")
-    pnote = f'<p style="font-size:13px;color:var(--gray);margin-top:12px">{esc(e["participants_note"])}</p>' if e.get("participants_note") else ""
+    pnote = f'<p style="font-size:14px;color:var(--gray);margin-top:12px">{esc(e["participants_note"])}</p>' if e.get("participants_note") else ""
     kaken = KAKEN.get(e["kaken"]) if e["kaken"] else None
     kk = f"<p style='font-size:13px;color:var(--gray)'>本研究会はJSPS科研費 基盤研究(C)「{esc(kaken['title'])}」（研究代表者：{esc(kaken['rep'])}）の助成を受けて開催しました。</p>" if kaken else ""
     idx = EVENTS.index(e)

@@ -17,7 +17,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{color-scheme:light dark}
-body{background:var(--paper);color:var(--ink);font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;line-height:1.85;font-size:16px;font-feature-settings:"palt"}
+body{background:var(--paper);color:var(--ink);font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;line-height:1.85;font-size:17px;font-feature-settings:"palt"}
 a{color:var(--ai);text-decoration:underline;text-underline-offset:.22em;text-decoration-thickness:1px}
 a:hover{color:var(--shu)}
 a:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
@@ -26,65 +26,73 @@ a:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
 header.site{background:var(--band);color:var(--onband);margin:0 -24px 48px;padding:22px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 @media(max-width:480px){header.site{margin-inline:-16px;padding-inline:16px}}
 header.site .mon{color:var(--onband);flex:none}
-header.site .name{font-size:19px;font-weight:700;letter-spacing:.04em;line-height:1.3}
+header.site .name{font-size:20px;font-weight:700;letter-spacing:.04em;line-height:1.3}
 header.site .name a{color:inherit;text-decoration:none}
 header.site .en{font-size:11px;letter-spacing:.22em;color:var(--onband-dim);margin-top:2px;font-weight:500}
-header.site nav{margin-left:auto;display:flex;gap:22px;font-size:13px;font-weight:500}
-header.site nav a{text-decoration:none;color:var(--onband-dim)}
+header.site nav{margin-left:auto;display:flex;gap:22px;font-size:14px;font-weight:500}
+header.site nav a{text-decoration:none;color:var(--onband-dim);display:flex;align-items:center;gap:6px}
+header.site nav svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
 header.site nav a:hover{color:var(--onband)}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin-bottom:10px}
-h1{font-size:34px;font-weight:700;letter-spacing:.01em;line-height:1.45;color:var(--ai-deep);text-wrap:balance}
-h1 .sub{display:block;font-size:17px;font-weight:500;letter-spacing:.02em;color:var(--gray);margin-top:8px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin-bottom:10px}
+h1{font-size:36px;font-weight:700;letter-spacing:.01em;line-height:1.45;color:var(--ai-deep);text-wrap:balance}
+h1 .sub{display:block;font-size:18px;font-weight:500;letter-spacing:.02em;color:var(--gray);margin-top:8px}
 section{margin-bottom:64px}
-h2{font-size:20px;font-weight:700;letter-spacing:.02em;color:var(--ai-deep);margin-bottom:22px;padding-bottom:10px;border-bottom:2px solid var(--rule);line-height:1.5}
-h3{font-size:16px;font-weight:700;color:var(--ai-deep);margin:26px 0 10px}
+h2{font-size:22px;font-weight:700;letter-spacing:.02em;color:var(--ai-deep);margin-bottom:22px;padding-bottom:10px;border-bottom:2px solid var(--rule);line-height:1.5}
+h3{font-size:17px;font-weight:700;color:var(--ai-deep);margin:26px 0 10px}
 p{max-width:680px;margin-bottom:14px}
-.lead p{font-size:16px}
-.meta{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:13px;color:var(--gray);margin:16px 0 36px;font-variant-numeric:tabular-nums}
-.meta b{color:var(--ink);font-weight:700;font-size:15px;margin-left:.3em}
-table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.lead p{font-size:17px}
+.meta{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:14px;color:var(--gray);margin:16px 0 36px;font-variant-numeric:tabular-nums}
+.meta b{color:var(--ink);font-weight:700;font-size:16px;margin-left:.3em}
+table{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
 th,td{border-bottom:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top;background:var(--panel)}
 th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(--gray)}
 .tbl{overflow-x:auto;max-width:720px;border:1px solid var(--line);border-radius:4px}
 /* archive list */
 .archive{list-style:none;border-top:1px solid var(--line)}
 .archive li{display:grid;grid-template-columns:11em 1fr;gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
-.archive .when{font-size:13px;color:var(--gray);font-variant-numeric:tabular-nums;line-height:1.7}
-.archive .when b{display:inline-block;color:var(--onband);background:var(--ai);font-weight:700;letter-spacing:.12em;font-size:11px;padding:2px 8px;border-radius:3px;margin-bottom:6px}
-.archive .what a{font-size:17px;font-weight:700;text-decoration:none;color:var(--ai-deep);line-height:1.5}
+.archive .when{font-size:14px;color:var(--gray);font-variant-numeric:tabular-nums;line-height:1.7}
+.archive .when b{display:inline-block;color:var(--onband);background:var(--ai);font-weight:700;letter-spacing:.12em;font-size:12px;padding:2px 8px;border-radius:3px;margin-bottom:6px}
+.archive .what a{font-size:18px;font-weight:700;text-decoration:none;color:var(--ai-deep);line-height:1.5}
 .archive .what a:hover{color:var(--shu)}
-.archive .what .sub{font-size:13px;color:var(--gray);margin-top:2px}
-.archive .what .who{font-size:13px;color:var(--gray);margin-top:6px}
-.archive .what .num{font-size:12px;color:var(--shu);font-weight:500;margin-top:4px}
+.archive .what .sub{font-size:14px;color:var(--gray);margin-top:2px}
+.archive .what .who{font-size:14px;color:var(--gray);margin-top:6px}
+.archive .what .num{font-size:13px;color:var(--shu);font-weight:500;margin-top:4px}
 @media(max-width:560px){.archive li{grid-template-columns:1fr}}
 /* speakers */
 .speakers{list-style:none}
 .speakers li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:10em 1fr;gap:4px 18px}
 .speakers li:first-child{border-top:1px solid var(--line)}
-.speakers .role{font-size:12px;color:var(--shu);font-weight:700;letter-spacing:.08em;padding-top:4px}
+.speakers .role{font-size:13px;color:var(--shu);font-weight:700;letter-spacing:.08em;padding-top:4px}
 .speakers .name{font-weight:700;color:var(--ai-deep)}
-.speakers .aff{font-size:13px;color:var(--gray)}
-.speakers .talk{font-size:14px;margin-top:2px}
+.speakers .aff{font-size:14px;color:var(--gray)}
+.speakers .talk{font-size:15px;margin-top:2px}
 @media(max-width:560px){.speakers li{grid-template-columns:1fr}}
 .quotes{list-style:none;max-width:680px}
-.quotes li{padding:8px 0 8px 16px;border-left:3px solid var(--ai);margin-bottom:8px;font-size:14px;background:var(--panel)}
-.note{font-size:13px;color:var(--gray);border:1px solid var(--line);background:var(--panel);padding:14px 18px;max-width:680px;border-radius:4px}
+.quotes li{padding:10px 0 10px 16px;border-left:3px solid var(--ai);margin-bottom:8px;font-size:15px;background:var(--panel)}
+.note{font-size:14px;color:var(--gray);border:1px solid var(--line);background:var(--panel);padding:14px 18px;max-width:680px;border-radius:4px}
 .note.hot{border-left:3px solid var(--shu)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
 @media(max-width:640px){.cols{grid-template-columns:1fr}}
 .founders{list-style:none}
-.founders li{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.founders li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
 .founders li b{font-weight:700;color:var(--ai-deep);margin-right:.6em}
-.kaken{font-size:14px;max-width:680px}
+.kaken{font-size:15px;max-width:680px}
 .kaken li{margin-bottom:8px;list-style:none;padding-left:0}
-.kaken .num{color:var(--gray);font-size:12px;letter-spacing:.06em;margin-left:.6em}
+.kaken .num{color:var(--gray);font-size:13px;letter-spacing:.06em;margin-left:.6em}
 .mats{list-style:none;max-width:680px}
-.mats li{display:flex;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.mats li{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
 .mats .k{width:9em;flex:none;color:var(--gray)}
 .mats .pending{color:var(--shu);font-weight:500}
-.stats{width:100%;min-width:320px;max-width:460px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:24px}
-.stats th{width:auto;text-align:left}
-.stats td{text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
+.stats{width:100%;min-width:0;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;}
+.stats th{width:auto;text-align:left;font-weight:400;color:var(--ink);white-space:normal}
+.stats td.bar{width:46%;padding-left:8px;padding-right:8px}
+.stats .track{position:relative;display:block;height:9px;border-radius:5px;background:var(--th);overflow:hidden}
+.stats .track::after{content:"";position:absolute;left:80%;top:0;bottom:0;width:1px;background:var(--line)}
+.stats .fill{display:block;height:100%;border-radius:5px;background:var(--c1)}
+.stats td.v{width:5em;text-align:right;font-weight:700;color:var(--ai-deep);white-space:nowrap}
+.stats tr.total th{font-weight:700}
+.barnote{font-size:13px;color:var(--gray);margin:10px 0 24px;line-height:1.6}
+.stats tr.total .track{background:var(--line)}
 .stats tr.total th,.stats tr.total td{background:var(--th);color:var(--ai-deep)}
 .trend th{width:auto;white-space:nowrap}
 .trend tr:first-child th{background:var(--th);text-align:left}
@@ -93,26 +101,26 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .trend td:nth-child(2){text-align:left;white-space:nowrap}
 .trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
 
-footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
+footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:14px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
-.back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
+.back{font-size:14px;margin-bottom:24px;display:inline-block;font-weight:500}
 /* publications with covers */
 .pubs{list-style:none;display:grid;gap:22px;max-width:680px}
 .pubs li{display:grid;grid-template-columns:92px 1fr;gap:18px;align-items:start}
 .pubs li.nocover{grid-template-columns:1fr}
 .pubs .cover img{width:100%;display:block;border:1px solid var(--line);border-radius:2px}
-.pubs .t{font-weight:700;color:var(--ai-deep);font-size:15px;line-height:1.6}
-.pubs .d{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.7}
+.pubs .t{font-weight:700;color:var(--ai-deep);font-size:16px;line-height:1.6}
+.pubs .d{font-size:14px;color:var(--gray);margin-top:4px;line-height:1.7}
 .evcover{max-width:170px;margin:0 0 36px}
 .evcover img{width:100%;display:block;border:1px solid var(--line);border-radius:2px}
-.evcover figcaption{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.6}
+.evcover figcaption{font-size:13px;color:var(--gray);margin-top:8px;line-height:1.6}
 /* photos */
 .ph{margin:0}
 .ph img,.ph .ph-empty{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--th);border-radius:4px;max-width:100%}
 .ph .ph-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gray);border:1px dashed var(--line);gap:4px}
 .ph .ph-empty span{font-weight:700;letter-spacing:.2em;font-size:13px}
 .ph .ph-empty small{font-size:11px;opacity:.8}
-.ph figcaption{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.6}
+.ph figcaption{font-size:13px;color:var(--gray);margin-top:8px;line-height:1.6}
 .hero{margin:-48px -24px 48px;position:relative}
 @media(max-width:480px){.hero{margin-inline:-16px}}
 .hero .ph img,.hero .ph .ph-empty{aspect-ratio:2/1;border-radius:0;object-position:50% 68%}
@@ -132,7 +140,7 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 /* chart */
 .chart{margin:0 0 20px;max-width:620px}
 .chart svg{display:block;width:100%;height:auto;overflow:visible}
-.chart .legend{display:flex;gap:20px;font-size:13px;color:var(--gray);margin-bottom:10px}
+.chart .legend{display:flex;gap:20px;font-size:14px;color:var(--gray);margin-bottom:10px}
 .chart .legend span{display:flex;align-items:center;gap:7px}
 .chart .legend span::before{content:"";width:14px;height:3px;border-radius:2px}
 .chart .legend .k1::before{background:var(--c1)}
@@ -148,12 +156,12 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .chart .vl{font-size:11px;font-weight:700;font-variant-numeric:tabular-nums}
 .chart .t1{fill:var(--c1)}
 .chart .t2{fill:var(--c2)}
-.chart figcaption{font-size:12px;color:var(--gray);margin-top:10px;line-height:1.6}
+.chart figcaption{font-size:13px;color:var(--gray);margin-top:10px;line-height:1.6}
 </style>
 <div class="wrap">
 <header class="site">
   <div><div class="name"><a href="index.html">大学リーダーシップ研究会</a></div><div class="en">COLLEGE LEADERSHIP FORUM</div></div>
-  <nav><a href="index.html#archive">研究会一覧</a><a href="index.html#about">研究会について</a><a href="index.html#contact">事務局</a></nav>
+  <nav><a href="index.html#archive"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4h8M5.5 8h8M5.5 12h8"/><path d="M2.5 4h.01M2.5 8h.01M2.5 12h.01"/></svg>研究会一覧</a><a href="index.html#about"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4"/><path d="M8 4.8h.01"/></svg>研究会について</a><a href="index.html#contact"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.8" y="3.6" width="12.4" height="8.8" rx="1.2"/><path d="M2.4 4.6 8 8.8l5.6-4.2"/></svg>事務局</a></nav>
 </header>
 <div class="hero"><figure class="ph"><img src="images/hero.jpg" alt="第8回公開研究会（2026年3月22日、内田洋行 ユビキタス協創広場CANVAS）" loading="lazy"><figcaption>第8回公開研究会（2026年3月22日、内田洋行 ユビキタス協創広場CANVAS）</figcaption></figure></div>
 <section class="lead">
@@ -209,25 +217,25 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 <div class="gallery about"><figure class="ph"><img src="images/nee2026_founders.jpg" alt="発起人4名。左から大森昭生、吉村充功、山本啓一、成田秀夫（New Education Expo 2026にて）" loading="lazy"><figcaption>発起人4名。左から大森昭生、吉村充功、山本啓一、成田秀夫（New Education Expo 2026にて）</figcaption></figure><figure class="ph"><img src="images/nee2026_panel.jpg" alt="パネルディスカッション（New Education Expo 2026）" loading="lazy"><figcaption>パネルディスカッション（New Education Expo 2026）</figcaption></figure></div>
 <div class="cols">
 <div><h3>発起人</h3><ul class="founders"><li><b>大森 昭生</b>共愛学園前橋国際大学 学長</li><li><b>成田 秀夫</b>日本文理大学 客員教授</li><li><b>吉村 充功</b>日本文理大学 副学長</li><li><b>山本 啓一</b>北陸大学 経済経営学部 教授</li></ul></div>
-<div><h3>科学研究費助成事業</h3><ul class="kaken"><li>2025〜2027年度　「ダイナミックな教学マネジメント体制の構築〜ミドル教職員の育成と組織開発に向けて」（研究代表者：山本啓一）<span class=num>25K06382</span></li><li>2022〜2024年度　「教学マネジメントにおける学部長等のミドルリーダーシップ研究」（研究代表者：山本啓一）<span class=num>22K02698</span></li></ul><p style="font-size:13px;color:var(--gray)">JSPS科研費 基盤研究(C)。公開研究会は本研究の一環として開催しています。</p></div>
+<div><h3>科学研究費助成事業</h3><ul class="kaken"><li>2025〜2027年度　「ダイナミックな教学マネジメント体制の構築〜ミドル教職員の育成と組織開発に向けて」（研究代表者：山本啓一）<span class=num>25K06382</span></li><li>2022〜2024年度　「教学マネジメントにおける学部長等のミドルリーダーシップ研究」（研究代表者：山本啓一）<span class=num>22K02698</span></li></ul><p style="font-size:14px;color:var(--gray)">JSPS科研費 基盤研究(C)。公開研究会は本研究の一環として開催しています。</p></div>
 </div>
 <h3>参加者アンケートの推移</h3>
 <figure class="chart">
 <div class="legend"><span class="k1">研究会全体の満足度</span><span class="k2">仕事との関連性</span></div>
 <svg viewBox="0 0 620 250" role="img" aria-label="研究会全体の満足度は4.46から4.79、仕事との関連性は4.38から4.75の範囲で推移しています。" preserveAspectRatio="xMidYMid meet">
-<line x1="44" y1="216.0" x2="604" y2="216.0" class="g"/><text x="36" y="220.0" class="ax" text-anchor="end">4.2</text><line x1="44" y1="166.5" x2="604" y2="166.5" class="g"/><text x="36" y="170.5" class="ax" text-anchor="end">4.4</text><line x1="44" y1="117.0" x2="604" y2="117.0" class="g"/><text x="36" y="121.0" class="ax" text-anchor="end">4.6</text><line x1="44" y1="67.5" x2="604" y2="67.5" class="g"/><text x="36" y="71.5" class="ax" text-anchor="end">4.8</text><line x1="44" y1="18.0" x2="604" y2="18.0" class="g"/><text x="36" y="22.0" class="ax" text-anchor="end">5.0</text>
-<path d="M 44.0 126.9 L 124.0 99.7 L 204.0 79.9 L 284.0 131.9 L 364.0 119.5 L 444.0 114.5 L 524.0 97.2 L 604.0 171.5" class="l2"/><path d="M 44.0 104.6 L 124.0 87.3 L 204.0 107.1 L 284.0 70.0 L 364.0 104.6 L 444.0 94.7 L 524.0 97.2 L 604.0 151.7" class="l1"/>
-<circle cx="44.0" cy="126.9" r="4" class="d2"/><circle cx="124.0" cy="99.7" r="4" class="d2"/><circle cx="204.0" cy="79.9" r="4" class="d2"/><circle cx="284.0" cy="131.9" r="4" class="d2"/><circle cx="364.0" cy="119.5" r="4" class="d2"/><circle cx="444.0" cy="114.5" r="4" class="d2"/><circle cx="524.0" cy="97.2" r="4" class="d2"/><circle cx="604.0" cy="171.5" r="4" class="d2"/><circle cx="44.0" cy="104.6" r="4" class="d1"/><circle cx="124.0" cy="87.3" r="4" class="d1"/><circle cx="204.0" cy="107.1" r="4" class="d1"/><circle cx="284.0" cy="70.0" r="4" class="d1"/><circle cx="364.0" cy="104.6" r="4" class="d1"/><circle cx="444.0" cy="94.7" r="4" class="d1"/><circle cx="524.0" cy="97.2" r="4" class="d1"/><circle cx="604.0" cy="151.7" r="4" class="d1"/>
-<text x="51.0" y="92.6" class="vl t1" text-anchor="start">4.65</text><text x="597.0" y="139.7" class="vl t1" text-anchor="end">4.46</text><text x="51.0" y="144.9" class="vl t2" text-anchor="start">4.56</text><text x="597.0" y="189.5" class="vl t2" text-anchor="end">4.38</text>
+<line x1="44" y1="216.0" x2="604" y2="216.0" class="g"/><text x="36" y="220.0" class="ax" text-anchor="end">1</text><line x1="44" y1="166.5" x2="604" y2="166.5" class="g"/><text x="36" y="170.5" class="ax" text-anchor="end">2</text><line x1="44" y1="117.0" x2="604" y2="117.0" class="g"/><text x="36" y="121.0" class="ax" text-anchor="end">3</text><line x1="44" y1="67.5" x2="604" y2="67.5" class="g"/><text x="36" y="71.5" class="ax" text-anchor="end">4</text><line x1="44" y1="18.0" x2="604" y2="18.0" class="g"/><text x="36" y="22.0" class="ax" text-anchor="end">5</text>
+<path d="M 44.0 39.8 L 124.0 34.3 L 204.0 30.4 L 284.0 40.8 L 364.0 38.3 L 444.0 37.3 L 524.0 33.8 L 604.0 48.7" class="l2"/><path d="M 44.0 35.3 L 124.0 31.9 L 204.0 35.8 L 284.0 28.4 L 364.0 35.3 L 444.0 33.3 L 524.0 33.8 L 604.0 44.7" class="l1"/>
+<circle cx="44.0" cy="39.8" r="4" class="d2"/><circle cx="124.0" cy="34.3" r="4" class="d2"/><circle cx="204.0" cy="30.4" r="4" class="d2"/><circle cx="284.0" cy="40.8" r="4" class="d2"/><circle cx="364.0" cy="38.3" r="4" class="d2"/><circle cx="444.0" cy="37.3" r="4" class="d2"/><circle cx="524.0" cy="33.8" r="4" class="d2"/><circle cx="604.0" cy="48.7" r="4" class="d2"/><circle cx="44.0" cy="35.3" r="4" class="d1"/><circle cx="124.0" cy="31.9" r="4" class="d1"/><circle cx="204.0" cy="35.8" r="4" class="d1"/><circle cx="284.0" cy="28.4" r="4" class="d1"/><circle cx="364.0" cy="35.3" r="4" class="d1"/><circle cx="444.0" cy="33.3" r="4" class="d1"/><circle cx="524.0" cy="33.8" r="4" class="d1"/><circle cx="604.0" cy="44.7" r="4" class="d1"/>
+<text x="51.0" y="23.3" class="vl t1" text-anchor="start">4.65</text><text x="597.0" y="32.7" class="vl t1" text-anchor="end">4.46</text><text x="51.0" y="57.8" class="vl t2" text-anchor="start">4.56</text><text x="597.0" y="66.7" class="vl t2" text-anchor="end">4.38</text>
 <text x="44.0" y="238" class="ax" text-anchor="middle">第2回</text><text x="124.0" y="238" class="ax" text-anchor="middle">第3回</text><text x="204.0" y="238" class="ax" text-anchor="middle">第4回</text><text x="284.0" y="238" class="ax" text-anchor="middle">第5回</text><text x="364.0" y="238" class="ax" text-anchor="middle">第6回</text><text x="444.0" y="238" class="ax" text-anchor="middle">第7回</text><text x="524.0" y="238" class="ax" text-anchor="middle">第8回</text><text x="604.0" y="238" class="ax" text-anchor="middle">第9回</text>
 </svg>
-<figcaption>縦軸は5段階評価の平均値。見やすさのため4.2から5.0の範囲で描いています。</figcaption>
+<figcaption>縦軸は5段階評価（1＝不満足〜5＝満足）の平均値です。どの回も4.4を上回っており、回による差は小さいことが分かります。正確な数値は下の表をご覧ください。</figcaption>
 </figure>
 <div class="tbl" style="max-width:620px"><table class="trend">
 <tr><th>回</th><th>開催</th><th>回答数</th><th>全体の満足度</th><th>仕事との関連性</th></tr>
 <tr><th>第2回</th><td>2022年7月</td><td>57</td><td>4.65</td><td>4.56</td></tr><tr><th>第3回</th><td>2023年2月</td><td>18</td><td>4.72</td><td>4.67</td></tr><tr><th>第4回</th><td>2023年7月</td><td>36</td><td>4.64</td><td>4.75</td></tr><tr><th>第5回</th><td>2024年7月</td><td>39</td><td>4.79</td><td>4.54</td></tr><tr><th>第6回</th><td>2025年2月</td><td>37</td><td>4.65</td><td>4.59</td></tr><tr><th>第7回</th><td>2025年7月</td><td>36</td><td>4.69</td><td>4.61</td></tr><tr><th>第8回</th><td>2026年3月</td><td>28</td><td>4.68</td><td>4.68</td></tr><tr><th>第9回</th><td>2026年7月</td><td>26</td><td>4.46</td><td>4.38</td></tr>
 </table></div>
-<p style="font-size:13px;color:var(--gray);margin-top:12px;max-width:680px;line-height:1.8">第1回はアンケートを実施していません。「研究会全体の満足度」と「仕事との関連性・有用性」は、第2回から第9回まで設問の文言が同一のため、横に並べて比べられます。セッション別の評価は回ごとに項目が異なるため、各回のページに掲載しています。いずれも5段階です。</p>
+<p style="font-size:14px;color:var(--gray);margin-top:12px;max-width:680px;line-height:1.8">第1回はアンケートを実施していません。「研究会全体の満足度」と「仕事との関連性・有用性」は、第2回から第9回まで設問の文言が同一のため、横に並べて比べられます。セッション別の評価は回ごとに項目が異なるため、各回のページに掲載しています。いずれも5段階です。</p>
 <h3>刊行物</h3><ul class="pubs"><li class="nocover"><div><div class="t">「学部長による教学マネジメントの認識とその構造」</div><div class="d">石川勝彦・山本啓一ほか　『北陸大学紀要』第60号、2025年</div></div></li><li><div class="cover"><img src="images/book2018.jpg" alt="『今選ぶなら、地方小規模私立大学！〜偏差値による進路選択からの脱却〜』 書影" loading="lazy"></div><div><div class="t">『今選ぶなら、地方小規模私立大学！〜偏差値による進路選択からの脱却〜』</div><div class="d">編著・報告：大森昭生（共愛学園前橋国際大学）、成田秀夫（河合文化教育研究所）、山本啓一（北陸大学）、吉村充功（日本文理大学）。特別対談：中原淳（立教大学 教授）。レゾンクリエイト、2018年</div></div></li></ul>
 <h3>関連する登壇・企画</h3><ul class="mats"><li><span class='k'>2026年6月4日</span><span>New Education Expo 2026（東京）に発起人4名で登壇</span></li><li><span class='k'>2023年6月1日・10日</span><span>New Education Expo 2023 において「教学マネジメント構築とミドルリーダーシップの重要性」をテーマに登壇</span></li><li><span class='k'>2023年3月16日</span><span>第29回大学教育研究フォーラム 参加者企画セッション「教学マネジメントにおける大学教員のミドルリーダーシップ」を開催</span></li></ul>
 </section>
