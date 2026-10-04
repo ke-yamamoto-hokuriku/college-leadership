@@ -3,17 +3,17 @@
 <style>
 :root{
   --ai:#22406b; --ai-deep:#16304f; --shu:#b14a3a; --ink:#16202c; --gray:#66717f;
-  --paper:#f7f8f8; --panel:#ffffff; --line:#dfe3e8; --rule:#22406b; --th:#eef1f5; --band:#1c2b45; --onband:#f4f6fa; --onband-dim:#b7c3d6;
+  --paper:#f7f8f8; --panel:#ffffff; --line:#dfe3e8; --c1:#3a6bb0; --c2:#b14a3a; --rule:#22406b; --th:#eef1f5; --band:#1c2b45; --onband:#f4f6fa; --onband-dim:#b7c3d6;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --ai:#8fb0e0; --ai-deep:#e6e9ee; --shu:#e08a7c; --ink:#e6e9ee; --gray:#98a3b3;
-    --paper:#0e141c; --panel:#161e29; --line:#2a3542; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
+    --paper:#0e141c; --panel:#161e29; --line:#2a3542; --c1:#5a8fd8; --c2:#d1694f; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
   }
 }
 :root[data-theme="dark"]{
   --ai:#8fb0e0; --ai-deep:#e6e9ee; --shu:#e08a7c; --ink:#e6e9ee; --gray:#98a3b3;
-  --paper:#0e141c; --panel:#161e29; --line:#2a3542; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
+  --paper:#0e141c; --panel:#161e29; --line:#2a3542; --c1:#5a8fd8; --c2:#d1694f; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{color-scheme:light dark}
@@ -92,6 +92,7 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .trend tr:first-child th:nth-child(n+3){text-align:right}
 .trend td:nth-child(2){text-align:left;white-space:nowrap}
 .trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
+
 footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
@@ -127,6 +128,27 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .archive .thumb .ph figcaption{display:none}
 @media(max-width:700px){.archive li{grid-template-columns:1fr}.archive .thumb{max-width:280px}}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+
+/* chart */
+.chart{margin:0 0 20px;max-width:620px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .legend{display:flex;gap:20px;font-size:13px;color:var(--gray);margin-bottom:10px}
+.chart .legend span{display:flex;align-items:center;gap:7px}
+.chart .legend span::before{content:"";width:14px;height:3px;border-radius:2px}
+.chart .legend .k1::before{background:var(--c1)}
+.chart .legend .k2::before{background:var(--c2)}
+.chart .g{stroke:var(--line);stroke-width:1}
+.chart .ax{font-size:11px;fill:var(--gray);font-variant-numeric:tabular-nums}
+.chart .l1,.chart .l2{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.chart .l1{stroke:var(--c1)}
+.chart .l2{stroke:var(--c2)}
+.chart .d1,.chart .d2{stroke:var(--panel);stroke-width:2}
+.chart .d1{fill:var(--c1)}
+.chart .d2{fill:var(--c2)}
+.chart .vl{font-size:11px;font-weight:700;font-variant-numeric:tabular-nums}
+.chart .t1{fill:var(--c1)}
+.chart .t2{fill:var(--c2)}
+.chart figcaption{font-size:12px;color:var(--gray);margin-top:10px;line-height:1.6}
 </style>
 <div class="wrap">
 <header class="site">
@@ -190,6 +212,17 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 <div><h3>科学研究費助成事業</h3><ul class="kaken"><li>2025〜2027年度　「ダイナミックな教学マネジメント体制の構築〜ミドル教職員の育成と組織開発に向けて」（研究代表者：山本啓一）<span class=num>25K06382</span></li><li>2022〜2024年度　「教学マネジメントにおける学部長等のミドルリーダーシップ研究」（研究代表者：山本啓一）<span class=num>22K02698</span></li></ul><p style="font-size:13px;color:var(--gray)">JSPS科研費 基盤研究(C)。公開研究会は本研究の一環として開催しています。</p></div>
 </div>
 <h3>参加者アンケートの推移</h3>
+<figure class="chart">
+<div class="legend"><span class="k1">研究会全体の満足度</span><span class="k2">仕事との関連性</span></div>
+<svg viewBox="0 0 620 250" role="img" aria-label="研究会全体の満足度は4.46から4.79、仕事との関連性は4.38から4.75の範囲で推移しています。" preserveAspectRatio="xMidYMid meet">
+<line x1="44" y1="216.0" x2="604" y2="216.0" class="g"/><text x="36" y="220.0" class="ax" text-anchor="end">4.2</text><line x1="44" y1="166.5" x2="604" y2="166.5" class="g"/><text x="36" y="170.5" class="ax" text-anchor="end">4.4</text><line x1="44" y1="117.0" x2="604" y2="117.0" class="g"/><text x="36" y="121.0" class="ax" text-anchor="end">4.6</text><line x1="44" y1="67.5" x2="604" y2="67.5" class="g"/><text x="36" y="71.5" class="ax" text-anchor="end">4.8</text><line x1="44" y1="18.0" x2="604" y2="18.0" class="g"/><text x="36" y="22.0" class="ax" text-anchor="end">5.0</text>
+<path d="M 44.0 126.9 L 124.0 99.7 L 204.0 79.9 L 284.0 131.9 L 364.0 119.5 L 444.0 114.5 L 524.0 97.2 L 604.0 171.5" class="l2"/><path d="M 44.0 104.6 L 124.0 87.3 L 204.0 107.1 L 284.0 70.0 L 364.0 104.6 L 444.0 94.7 L 524.0 97.2 L 604.0 151.7" class="l1"/>
+<circle cx="44.0" cy="126.9" r="4" class="d2"/><circle cx="124.0" cy="99.7" r="4" class="d2"/><circle cx="204.0" cy="79.9" r="4" class="d2"/><circle cx="284.0" cy="131.9" r="4" class="d2"/><circle cx="364.0" cy="119.5" r="4" class="d2"/><circle cx="444.0" cy="114.5" r="4" class="d2"/><circle cx="524.0" cy="97.2" r="4" class="d2"/><circle cx="604.0" cy="171.5" r="4" class="d2"/><circle cx="44.0" cy="104.6" r="4" class="d1"/><circle cx="124.0" cy="87.3" r="4" class="d1"/><circle cx="204.0" cy="107.1" r="4" class="d1"/><circle cx="284.0" cy="70.0" r="4" class="d1"/><circle cx="364.0" cy="104.6" r="4" class="d1"/><circle cx="444.0" cy="94.7" r="4" class="d1"/><circle cx="524.0" cy="97.2" r="4" class="d1"/><circle cx="604.0" cy="151.7" r="4" class="d1"/>
+<text x="51.0" y="92.6" class="vl t1" text-anchor="start">4.65</text><text x="597.0" y="139.7" class="vl t1" text-anchor="end">4.46</text><text x="51.0" y="144.9" class="vl t2" text-anchor="start">4.56</text><text x="597.0" y="189.5" class="vl t2" text-anchor="end">4.38</text>
+<text x="44.0" y="238" class="ax" text-anchor="middle">第2回</text><text x="124.0" y="238" class="ax" text-anchor="middle">第3回</text><text x="204.0" y="238" class="ax" text-anchor="middle">第4回</text><text x="284.0" y="238" class="ax" text-anchor="middle">第5回</text><text x="364.0" y="238" class="ax" text-anchor="middle">第6回</text><text x="444.0" y="238" class="ax" text-anchor="middle">第7回</text><text x="524.0" y="238" class="ax" text-anchor="middle">第8回</text><text x="604.0" y="238" class="ax" text-anchor="middle">第9回</text>
+</svg>
+<figcaption>縦軸は5段階評価の平均値。見やすさのため4.2から5.0の範囲で描いています。</figcaption>
+</figure>
 <div class="tbl" style="max-width:620px"><table class="trend">
 <tr><th>回</th><th>開催</th><th>回答数</th><th>全体の満足度</th><th>仕事との関連性</th></tr>
 <tr><th>第2回</th><td>2022年7月</td><td>57</td><td>4.65</td><td>4.56</td></tr><tr><th>第3回</th><td>2023年2月</td><td>18</td><td>4.72</td><td>4.67</td></tr><tr><th>第4回</th><td>2023年7月</td><td>36</td><td>4.64</td><td>4.75</td></tr><tr><th>第5回</th><td>2024年7月</td><td>39</td><td>4.79</td><td>4.54</td></tr><tr><th>第6回</th><td>2025年2月</td><td>37</td><td>4.65</td><td>4.59</td></tr><tr><th>第7回</th><td>2025年7月</td><td>36</td><td>4.69</td><td>4.61</td></tr><tr><th>第8回</th><td>2026年3月</td><td>28</td><td>4.68</td><td>4.68</td></tr><tr><th>第9回</th><td>2026年7月</td><td>26</td><td>4.46</td><td>4.38</td></tr>

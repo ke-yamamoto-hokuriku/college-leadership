@@ -23,17 +23,17 @@ FONTS = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=N
 CSS = """
 :root{
   --ai:#22406b; --ai-deep:#16304f; --shu:#b14a3a; --ink:#16202c; --gray:#66717f;
-  --paper:#f7f8f8; --panel:#ffffff; --line:#dfe3e8; --rule:#22406b; --th:#eef1f5; --band:#1c2b45; --onband:#f4f6fa; --onband-dim:#b7c3d6;
+  --paper:#f7f8f8; --panel:#ffffff; --line:#dfe3e8; --c1:#3a6bb0; --c2:#b14a3a; --rule:#22406b; --th:#eef1f5; --band:#1c2b45; --onband:#f4f6fa; --onband-dim:#b7c3d6;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --ai:#8fb0e0; --ai-deep:#e6e9ee; --shu:#e08a7c; --ink:#e6e9ee; --gray:#98a3b3;
-    --paper:#0e141c; --panel:#161e29; --line:#2a3542; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
+    --paper:#0e141c; --panel:#161e29; --line:#2a3542; --c1:#5a8fd8; --c2:#d1694f; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
   }
 }
 :root[data-theme="dark"]{
   --ai:#8fb0e0; --ai-deep:#e6e9ee; --shu:#e08a7c; --ink:#e6e9ee; --gray:#98a3b3;
-  --paper:#0e141c; --panel:#161e29; --line:#2a3542; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
+  --paper:#0e141c; --panel:#161e29; --line:#2a3542; --c1:#5a8fd8; --c2:#d1694f; --rule:#8fb0e0; --th:#1d2733; --band:#111a26; --onband:#f4f6fa; --onband-dim:#8f9db3;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{color-scheme:light dark}
@@ -112,6 +112,7 @@ th{background:var(--th);font-weight:700;white-space:nowrap;width:8em;color:var(-
 .trend tr:first-child th:nth-child(n+3){text-align:right}
 .trend td:nth-child(2){text-align:left;white-space:nowrap}
 .trend tr:last-child th,.trend tr:last-child td{border-bottom:0}
+
 footer.site{border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--gray);line-height:1.8}
 footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .back{font-size:13px;margin-bottom:24px;display:inline-block;font-weight:500}
@@ -186,6 +187,74 @@ def archive_item(e):
 <div class="what"><a href="events/{e['slug']}.html">{esc(e['title'])}</a>{sub}{whos}{num}</div>
 <div class="thumb">{photo(e['photos'][0]) if e.get('photos') else ""}</div></li>"""
 
+CHART_CSS = """
+/* chart */
+.chart{margin:0 0 20px;max-width:620px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .legend{display:flex;gap:20px;font-size:13px;color:var(--gray);margin-bottom:10px}
+.chart .legend span{display:flex;align-items:center;gap:7px}
+.chart .legend span::before{content:"";width:14px;height:3px;border-radius:2px}
+.chart .legend .k1::before{background:var(--c1)}
+.chart .legend .k2::before{background:var(--c2)}
+.chart .g{stroke:var(--line);stroke-width:1}
+.chart .ax{font-size:11px;fill:var(--gray);font-variant-numeric:tabular-nums}
+.chart .l1,.chart .l2{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.chart .l1{stroke:var(--c1)}
+.chart .l2{stroke:var(--c2)}
+.chart .d1,.chart .d2{stroke:var(--panel);stroke-width:2}
+.chart .d1{fill:var(--c1)}
+.chart .d2{fill:var(--c2)}
+.chart .vl{font-size:11px;font-weight:700;font-variant-numeric:tabular-nums}
+.chart .t1{fill:var(--c1)}
+.chart .t2{fill:var(--c2)}
+.chart figcaption{font-size:12px;color:var(--gray);margin-top:10px;line-height:1.6}
+"""
+
+def trend_svg(rows):
+    """全体満足度と仕事との関連性の推移を折れ線で描く。"""
+    if not rows: return ""
+    W, H = 620, 250
+    L, R, T, B = 44, 16, 18, 34
+    lo, hi = 4.2, 5.0
+    n = len(rows)
+    step = (W - L - R) / (n - 1)
+    def X(i): return L + step * i
+    def Y(v): return T + (H - T - B) * (hi - v) / (hi - lo)
+    s1 = [float(r[3]) for r in rows]   # 全体の満足度
+    s2 = [float(r[4]) for r in rows]   # 仕事との関連性
+    grid = "".join(
+        f'<line x1="{L}" y1="{Y(v):.1f}" x2="{W-R}" y2="{Y(v):.1f}" class="g"/>'
+        f'<text x="{L-8}" y="{Y(v)+4:.1f}" class="ax" text-anchor="end">{v:.1f}</text>'
+        for v in (4.2, 4.4, 4.6, 4.8, 5.0))
+    xlab = "".join(
+        f'<text x="{X(i):.1f}" y="{H-12}" class="ax" text-anchor="middle">{esc(r[0])}</text>'
+        for i, r in enumerate(rows))
+    def path(vals):
+        return "M " + " L ".join(f"{X(i):.1f} {Y(v):.1f}" for i, v in enumerate(vals))
+    def dots(vals, cls):
+        return "".join(f'<circle cx="{X(i):.1f}" cy="{Y(v):.1f}" r="4" class="{cls}"/>'
+                       for i, v in enumerate(vals))
+    def tag(i, v, cls, dy):
+        anchor = "start" if i == 0 else ("end" if i == n - 1 else "middle")
+        ox = 7 if i == 0 else (-7 if i == n - 1 else 0)
+        return (f'<text x="{X(i)+ox:.1f}" y="{Y(v)+dy:.1f}" class="vl {cls}" '
+                f'text-anchor="{anchor}">{v:.2f}</text>')
+    labels = (tag(0, s1[0], "t1", -12) + tag(n-1, s1[-1], "t1", -12)
+              + tag(0, s2[0], "t2", 18) + tag(n-1, s2[-1], "t2", 18))
+    desc = (f"研究会全体の満足度は{min(s1):.2f}から{max(s1):.2f}、"
+            f"仕事との関連性は{min(s2):.2f}から{max(s2):.2f}の範囲で推移しています。")
+    return f"""<figure class="chart">
+<div class="legend"><span class="k1">研究会全体の満足度</span><span class="k2">仕事との関連性</span></div>
+<svg viewBox="0 0 {W} {H}" role="img" aria-label="{esc(desc)}" preserveAspectRatio="xMidYMid meet">
+{grid}
+<path d="{path(s2)}" class="l2"/><path d="{path(s1)}" class="l1"/>
+{dots(s2,'d2')}{dots(s1,'d1')}
+{labels}
+{xlab}
+</svg>
+<figcaption>縦軸は5段階評価の平均値。見やすさのため4.2から5.0の範囲で描いています。</figcaption>
+</figure>"""
+
 def index_page():
     latest = EVENTS[0]
     pending = latest["status"] == "report_pending"
@@ -209,9 +278,10 @@ def index_page():
     trend = "".join(
         "<tr><th>%s</th><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % tuple(esc(c) for c in r)
         for r in S.get("survey_trend", []))
+    trend_chart = trend_svg(S.get("survey_trend", []))
     body = f"""<title>{esc(S['name'])}</title>
 {FONTS}
-<style>{CSS}</style>
+<style>{CSS}{CHART_CSS}</style>
 <div class="wrap">
 {header()}
 <div class="hero">{photo(S.get('hero'))}</div>
@@ -236,6 +306,7 @@ def index_page():
 <div><h3>科学研究費助成事業</h3><ul class="kaken">{kaken}</ul><p style="font-size:13px;color:var(--gray)">JSPS科研費 基盤研究(C)。公開研究会は本研究の一環として開催しています。</p></div>
 </div>
 <h3>参加者アンケートの推移</h3>
+{trend_chart}
 <div class="tbl" style="max-width:620px"><table class="trend">
 <tr><th>回</th><th>開催</th><th>回答数</th><th>全体の満足度</th><th>仕事との関連性</th></tr>
 {trend}
