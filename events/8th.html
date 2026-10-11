@@ -146,12 +146,116 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 .archive .thumb .ph figcaption{display:none}
 @media(max-width:700px){.archive li{grid-template-columns:1fr}.archive .thumb{max-width:280px}}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
-</style></head><body>
+
+body{background:var(--paper)}
+.mx{max-width:1200px;margin:0 auto;padding-inline:32px}
+@media(max-width:640px){.mx{padding-inline:16px}}
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--band) 90%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);color:var(--onband)}
+header.top .mx{display:flex;align-items:center;gap:16px;height:68px}
+header.top .name{font-size:18px;font-weight:700;letter-spacing:.04em;line-height:1.25}
+header.top .name a{color:inherit;text-decoration:none}
+header.top .en{font-size:10px;letter-spacing:.24em;color:var(--onband-dim);font-weight:500}
+header.top nav{margin-left:auto;display:flex;gap:6px;font-size:14px;font-weight:500}
+header.top nav a{color:var(--onband-dim);text-decoration:none;display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;transition:background .2s,color .2s}
+header.top nav a:hover{color:var(--onband);background:rgba(255,255,255,.08)}
+header.top nav svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:720px){header.top .mx{height:auto;padding-block:12px;flex-wrap:wrap}header.top nav{margin-left:0;width:100%;justify-content:space-between}header.top nav a{padding:6px 8px;font-size:13px}}
+/* hero */
+.mhero{position:relative;min-height:clamp(460px,72vh,680px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0f1a2a}
+.mhero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.mhero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,17,30,.15) 0%,rgba(9,17,30,.35) 45%,rgba(9,17,30,.88) 100%)}
+.mhero .mx{position:relative;z-index:1;width:100%;padding-block:0 112px}
+.mhero .kicker{font-size:13px;font-weight:700;letter-spacing:.24em;color:#c9d6ea;margin-bottom:16px}
+.mhero h1{color:#fff;font-size:clamp(30px,4.6vw,56px);line-height:1.3;letter-spacing:.01em;max-width:16em}
+.mhero .lede{font-size:clamp(15px,1.6vw,18px);color:#e3e9f2;max-width:40em;margin-top:18px;line-height:1.8}
+.mhero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;transition:transform .15s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.pri{background:#b14a3a;color:#fff;box-shadow:0 6px 18px rgba(177,74,58,.35)}
+.btn.pri:hover{color:#fff;background:#9e3f31}
+.btn.ghost{color:#fff;border:1px solid rgba(255,255,255,.55)}
+.btn.ghost:hover{color:#fff;background:rgba(255,255,255,.12)}
+.btn.line{color:var(--ai-deep);border:1px solid var(--line);background:var(--panel)}
+.btn.line:hover{border-color:var(--ai);color:var(--ai)}
+.mhero .credit{position:absolute;left:32px;right:32px;bottom:14px;z-index:1;font-size:12px;color:#aab6c8;text-align:right;line-height:1.5}
+@media(max-width:640px){.mhero .credit{left:16px;right:16px;font-size:11px}.mhero .mx{padding-bottom:120px}}
+/* stats */
+.stats-band{position:relative;z-index:2;margin-top:-64px}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);background:var(--panel);border-radius:16px;box-shadow:0 1px 2px rgba(16,32,60,.06),0 12px 32px rgba(16,32,60,.10);overflow:hidden}
+.tile{padding:22px 24px;border-right:1px solid var(--line)}
+.tile:last-child{border-right:0}
+.tile .n{font-size:clamp(28px,3.2vw,40px);font-weight:700;color:var(--ai-deep);line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.tile .n small{font-size:15px;font-weight:700;margin-left:2px;color:var(--gray)}
+.tile .l{font-size:13px;color:var(--gray);margin-top:6px;letter-spacing:.06em}
+@media(max-width:820px){.tiles{grid-template-columns:repeat(2,1fr)}.tile{border-bottom:1px solid var(--line)}.tile:nth-child(2n){border-right:0}.tile:last-child{grid-column:1/-1;border-bottom:0}}
+/* sections */
+.msec{padding-block:88px 0}
+.mhead{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.mhead .ey{font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--shu);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.mhead .ey::before{content:"";width:24px;height:2px;background:var(--shu);border-radius:2px}
+.mhead h2{font-size:clamp(24px,2.6vw,32px);border:0;padding:0;margin:0;line-height:1.35}
+.intro2{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:start}
+.intro2 .big{font-size:clamp(20px,2.2vw,26px);font-weight:700;color:var(--ai-deep);line-height:1.6;text-wrap:balance}
+.intro2 p{max-width:none}
+@media(max-width:820px){.intro2{grid-template-columns:1fr;gap:16px}}
+/* feature */
+.feature{display:grid;grid-template-columns:1.25fr 1fr;background:var(--panel);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(16,32,60,.05),0 10px 30px rgba(16,32,60,.07)}
+.feature .img{min-height:320px;position:relative}
+.feature .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feature .body{padding:36px 36px 32px;display:flex;flex-direction:column;gap:10px}
+.badge{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.14em;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--ai) 12%,transparent);color:var(--ai)}
+.badge.new{background:var(--shu);color:#fff}
+.feature h3{font-size:clamp(22px,2.2vw,28px);margin:4px 0 0;line-height:1.45}
+.feature .sub{color:var(--gray);font-size:15px;margin-top:-4px}
+.feature .facts{font-size:14px;color:var(--gray);line-height:1.8}
+.feature .facts b{color:var(--ink);font-weight:500}
+.feature .go{margin-top:auto;padding-top:12px}
+@media(max-width:820px){.feature{grid-template-columns:1fr}.feature .img{min-height:220px;aspect-ratio:16/10}.feature .body{padding:24px}}
+.nextnote{margin-top:18px;display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;font-size:15px}
+.nextnote .k{flex:none;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--shu);padding-top:4px}
+.nextnote p{margin:0;max-width:none}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;list-style:none}
+.card{display:flex;flex-direction:column;background:var(--panel);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(16,32,60,.05),0 6px 20px rgba(16,32,60,.06);transition:transform .2s,box-shadow .2s;height:100%}
+.card:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(16,32,60,.06),0 16px 36px rgba(16,32,60,.12);color:inherit}
+.card .im{aspect-ratio:16/10;background:var(--th);overflow:hidden}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover .im img{transform:scale(1.04)}
+.card .cb{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--gray);font-variant-numeric:tabular-nums}
+.card h3{font-size:18px;margin:2px 0 0;line-height:1.5;color:var(--ai-deep)}
+.card:hover h3{color:var(--shu)}
+.card .sub{font-size:14px;color:var(--gray);line-height:1.6}
+.card .who{font-size:13px;color:var(--gray);margin-top:auto;padding-top:8px;border-top:1px solid var(--line)}
+.card .num{font-size:12px;color:var(--shu);font-weight:500}
+/* about */
+.persons{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;list-style:none}
+.persons li{background:var(--panel);border-radius:12px;padding:18px 20px;border:1px solid var(--line)}
+.persons b{display:block;font-size:17px;color:var(--ai-deep)}
+.persons span{font-size:13px;color:var(--gray);line-height:1.6;display:block;margin-top:4px}
+@media(max-width:820px){.persons{grid-template-columns:1fr 1fr}}
+.pane{background:var(--panel);border-radius:16px;padding:28px 32px;box-shadow:0 1px 2px rgba(16,32,60,.05),0 6px 20px rgba(16,32,60,.05)}
+@media(max-width:640px){.pane{padding:20px 18px}}
+.split{display:grid;grid-template-columns:1fr;gap:20px}
+.split>div{min-width:0}
+.pane .chart{max-width:820px}
+.pane .trend{max-width:820px}
+.subh{font-size:18px;font-weight:700;color:var(--ai-deep);margin:0 0 16px}
+.mgal{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+.mgal .ph img{border-radius:12px}
+@media(max-width:640px){.mgal{grid-template-columns:1fr}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid2>div{min-width:0}
+@media(max-width:820px){.grid2{grid-template-columns:1fr}}
+.pane .tbl{border:0;max-width:none}
+footer.mfoot{margin-top:96px;background:var(--band);color:var(--onband-dim);font-size:14px;line-height:1.9}
+footer.mfoot .mx{padding-block:40px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer.mfoot b{color:var(--onband);font-size:16px;display:block;margin-bottom:6px}
+footer.mfoot a{color:var(--onband-dim)}
+.wrap{padding-top:40px;padding-bottom:0}.back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--panel)}</style></head><body>
+<header class="top"><div class="mx"><div><div class="name"><a href="../index.html">大学リーダーシップ研究会</a></div><div class="en">COLLEGE LEADERSHIP FORUM</div></div><nav><a href="../index.html#archive"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4h8M5.5 8h8M5.5 12h8"/><path d="M2.5 4h.01M2.5 8h.01M2.5 12h.01"/></svg>研究会一覧</a><a href="../index.html#about"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4"/><path d="M8 4.8h.01"/></svg>研究会について</a><a href="../index.html#contact"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.8" y="3.6" width="12.4" height="8.8" rx="1.2"/><path d="M2.4 4.6 8 8.8l5.6-4.2"/></svg>事務局</a></nav></div></header>
 <div class="wrap">
-<header class="site">
-  <div><div class="name"><a href="../index.html">大学リーダーシップ研究会</a></div><div class="en">COLLEGE LEADERSHIP FORUM</div></div>
-  <nav><a href="../index.html#archive"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4h8M5.5 8h8M5.5 12h8"/><path d="M2.5 4h.01M2.5 8h.01M2.5 12h.01"/></svg>研究会一覧</a><a href="../index.html#about"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4"/><path d="M8 4.8h.01"/></svg>研究会について</a><a href="../index.html#contact"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.8" y="3.6" width="12.4" height="8.8" rx="1.2"/><path d="M2.4 4.6 8 8.8l5.6-4.2"/></svg>事務局</a></nav>
-</header>
 <a class="back" href="../index.html#archive">← 研究会一覧</a>
 <section class="lead">
 <div class="eyebrow">FORUM 08 · 2026-03-22</div>
@@ -163,13 +267,11 @@ footer.site .mon{color:var(--ai);float:right;margin-left:20px}
 <div class="gallery"><figure class="ph"><img src="../images/8th_open.jpg" alt="開会時の会場（内田洋行 新川本社 ユビキタス協創広場 CANVAS）" loading="lazy"><figcaption>開会時の会場（内田洋行 新川本社 ユビキタス協創広場 CANVAS）</figcaption></figure><figure class="ph"><img src="../images/8th_hall.jpg" alt="パネルディスカッションを聞く参加者" loading="lazy"><figcaption>パネルディスカッションを聞く参加者</figcaption></figure><figure class="ph"><img src="../images/8th_gw.jpg" alt="グループワーク" loading="lazy"><figcaption>グループワーク</figcaption></figure></div>
 
 <section><div class="eyebrow">OUTLINE</div><h2>開催概要</h2><div class="tbl"><table><tr><th>日時</th><td>2026年3月22日（日）　14:00開始</td></tr><tr><th>会場</th><td>株式会社内田洋行 新川本社 ユビキタス協創広場 CANVAS（東京都中央区新川2-4-7）</td></tr><tr><th>主催</th><td>大学リーダーシップ研究会</td></tr><tr><th>参加者</th><td>70名（一般参加60名／主催・事務局7名／登壇者3名）</td></tr></table></div><p style="font-size:14px;color:var(--gray);margin-top:12px">参加者数は、研究会が保有する第1〜9回の統合参加者データ（v13）にもとづく集計です。申込記録を基礎としているため、当日の実数とは若干の差がありえます。</p></section>
-<section><div class="eyebrow">PROGRAM</div><h2>登壇者とプログラム</h2><ul class="speakers"><li><span class='role'>講演</span><div><div class='name'>大森 昭生</div><div class='aff'>共愛学園前橋国際大学 学長</div></div></li><li><span class='role'>講演</span><div><div class='name'>村山 賢哉</div><div class='aff'>共愛学園前橋国際大学 国際社会学部長</div><div class='talk'>「改革の進め方の裏側」</div></div></li><li><span class='role'>講演</span><div><div class='name'>後藤 さゆり</div><div class='aff'>共愛学園前橋国際大学 副学長</div><div class='talk'>「自律的組織を生成する――対話による合意形成」</div></div></li><li><span class='role'>パネルディスカッション</span><div><div class='name'>山本 啓一（ファシリテーター）・吉村 充功・成田 秀夫</div><div class='aff'>北陸大学・日本文理大学・日本文理大学</div></div></li><li><span class='role'>グループワーク</span><div><div class='name'>成田 秀夫（ファシリテーター）</div><div class='aff'>日本文理大学</div><div class='talk'>「自分の大学の翻訳構造を描く」</div></div></li></ul></section>
-<section><div class="eyebrow">REPORT</div><h2>開催報告</h2><p>以下は、当日の発言録をもとに、各登壇者の発言の要旨をまとめたものです。発言録は自動文字起こしをもとに事務局が作成し、登壇者の確認を経ています。引用部分は発言録からの抜粋です。</p><div class="rep"><h3>趣旨説明</h3><p class="rsub">山本 啓一（北陸大学）</p><p>本研究会は2018年に4名で発足し、2022年からは科研費の助成を受けて年2回の公開研究会を開いています。2025年度に始まった第2期では、「教学マネジメントと生き残りのための変革」をテーマに、「ダイナミックな教学マネジメント体制の構築」をキーワードとして研究を進めています。</p><p>山本は、質保証を深めることと、外から新しいものを取り込むことを両立させる「両利きの経営」が、いまの大学に必要だと述べました。そのうえで、トップ・ミドル・現場が相互に行き来する関係を「ダイナミック」と呼び、学長の教育ビジョンが授業や学生のレベルにどう届くのかを今回の問いとしました。登壇者は共愛学園前橋国際大学の学長・副学長・学部長の3名です。会場には学長8名を含む教職員が集まり、教員と職員の比率はおよそ1.7対1でした。</p><blockquote class="hl"><p>ミドルがいなければ、現場の授業が変わらない。現場の授業が変わらなければ、学生が変わらない。</p><cite>山本 啓一</cite></blockquote></div><div class="rep"><h3>話題提供1　大森 昭生</h3><p class="rsub">共愛学園前橋国際大学 学長</p><figure class="ph rfig"><img src="../images/8th_omori.jpg" alt="話題提供する大森昭生学長" loading="lazy"><figcaption>話題提供する大森昭生学長</figcaption></figure><p>大森学長はまず、大学の概要と意思決定の仕組みを紹介しました。学長は推薦委員会が候補者を選び、教職員全員の信任投票を経て理事会が承認します。副学長と学長補佐は学長が指名します。一方、学部長は課長以上の職員も議決権を持つ教授会の選挙で選ばれます。毎週の学長室会議には理事長も出席し、教員・職員だけでなくパートや委託の職員も参加するスタッフ会議を、教授会よりも重要な会議体として置いています。</p><p>続いて最近の取組が三つ紹介されました。第一は学修成果の可視化です。学生はポートフォリオに蓄えた記録をもとに「共愛12の力」のルーブリックで自己評価し、全学生が教員と面談します。この基盤を作ったのは後藤副学長です。第二はDPからさかのぼったカリキュラム改革で、4年かけて480科目を346科目に絞り、共通科目と専門科目の比率を4対6から6対4に改めました。第三は2026年4月に開設するデジタル共創学部で、構想は学長が描き、モジュール型の科目設計は村山学部長が担いました。</p><blockquote class="hl"><p>やっぱりDPは受験生との約束、4年後にこの力がついてるよという約束ですので、そこを最初からお話をしています。</p><cite>大森 昭生</cite></blockquote><blockquote class="hl"><p>だから学長がこうだと思っても、教授会っていうか学部が違うよねって言える体制にしているということなんです。</p><cite>大森 昭生</cite></blockquote></div><div class="rep"><h3>話題提供2　村山 賢哉</h3><p class="rsub">共愛学園前橋国際大学 国際社会学部長（2026年4月からデジタル共創学部長）</p><figure class="ph rfig"><img src="../images/8th_murayama.jpg" alt="話題提供する村山賢哉学部長" loading="lazy"><figcaption>話題提供する村山賢哉学部長</figcaption></figure><p>村山学部長は、ミドルが実際にどう動いているかを二つの型で説明しました。一つは現場から始まる型です。入試や教務の現場で問題が提起されると、学長室会議で相談します。学長は「それで行こうか」「じゃあお願いね」と応じるだけで、具体的な指示はあまり出しません。学部長・副学長・機構長が現場と関係者の調整に走り、各部門とコースの長が集まる月1回の企画運営会議に諮ります。8割はそのまま通り、2割は差し戻されます。</p><p>もう一つは学長のビジョンを実現する型です。学長が国や社会の動きを大学の言葉に置き換えて示し、具体化はミドルに任せます。デジタル共創学部の設置では、新カリキュラムの検証が終わらないうちに国の成長分野支援の申請が採択され、マネジメントスタッフ2名と村山学部長の3名で学部を設計しました。</p><blockquote class="hl"><p>上下で常に情報が共有される。板挟みになることがあまりないというのが、ミドルの率直な感想でして。</p><cite>村山 賢哉</cite></blockquote><blockquote class="hl"><p>よく言えば非常に柔軟で、権限委譲がスムーズに行われている組織、悪く言うと、実は自転車操業というところではあるんですけれども</p><cite>村山 賢哉</cite></blockquote></div><div class="rep"><h3>話題提供3　後藤 さゆり</h3><p class="rsub">共愛学園前橋国際大学 副学長</p><figure class="ph rfig"><img src="../images/8th_1.jpg" alt="話題提供する後藤さゆり副学長" loading="lazy"><figcaption>話題提供する後藤さゆり副学長</figcaption></figure><p>後藤副学長は、質保証のために教員一人ひとりの授業を変えてもらう場面に絞って話しました。前提として、「共愛＝共生」という理念が学生も含めて共有されていること、開学以来の学生中心主義があること、教職員も学生も運営に関わる「スタッフ」であることを挙げました。文部科学省の補助事業も、ビジョンを先に描いて取りに行ったのではなく、事業を走らせるうちにいまの形ができたといいます。</p><p>新カリキュラムを作る際には、決定を伝達するのでも、賛否を問う議論にするのでもなく、対話を重ねました。5つのコースはそれぞれ専門分野が違います。後藤副学長は案を一つに絞らずに示し、各コースから望ましい形を聞き取って、ほぼ1年かけて話し合いを続けました。その結果、大きな反対はなかったと述べました。</p><blockquote class="hl"><p>提案しますが、各コースでどんな形が望ましいかを考えてください</p><cite>後藤 さゆり（カリキュラム案を示した際の言葉）</cite></blockquote><blockquote class="hl"><p>本学の風土として一番大事にしたのは、対話でした</p><cite>後藤 さゆり</cite></blockquote></div><div class="rep"><h3>パネルディスカッション</h3><p class="rsub">ファシリテーター：山本 啓一／登壇：大森 昭生・後藤 さゆり・村山 賢哉／コメンテーター：吉村 充功・成田 秀夫</p><figure class="ph rfig"><img src="../images/8th_2.jpg" alt="パネルディスカッション" loading="lazy"><figcaption>パネルディスカッション</figcaption></figure><p>吉村先生は、学内で誰が板挟みになっているのかを尋ねました。村山学部長は、論理で仕組みを作ろうとする自分と現場の間に後藤副学長が入っているのではないかと答え、後藤副学長は、やっているときは必死で板挟みとは感じなかったと応じました。ビジョンは最初から共有されていたのかという問いには、後藤副学長と村山学部長が、学長個人よりも大学の理念と学生中心主義に従ってきたと答えました。成田先生が、自転車操業のように動き続けているから改革が進むのではないかと問うと、大森学長は止まったら終わりだと答えました。</p><p>山本は、大森学長自身が国の動向を学内向けに翻訳していると指摘しました。村山学部長は、学長が大学として翻訳したものを、自分が学生に合わせて翻訳していると述べました。平時の学長は学内を歩いて相談を受け、ミドルがそれを形にするために走り回る関係も紹介されました。総務部長を学長補佐に充てている理由について、大森学長は、予算に関わる実務上の理由と、教員と職員が対等であることを示す意味の二つを挙げました。</p><blockquote class="hl"><p>いや逆に言うと止まったら死ぬんじゃないですか。止まったら死ぬんですよ。</p><cite>大森 昭生</cite></blockquote><blockquote class="hl"><p>学生中心主義で、学生のためにって言った瞬間に、うちのスタッフってみんな賛同してくれるんです。</p><cite>後藤 さゆり</cite></blockquote></div><div class="rep"><h3>グループワークと質疑応答</h3><p class="rsub">ファシリテーター：成田 秀夫</p><figure class="ph rfig"><img src="../images/8th_share.jpg" alt="グループごとの発表" loading="lazy"><figcaption>グループごとの発表</figcaption></figure><p>参加者は9グループに分かれ、ビジョンが現場に届いている部分と途切れている部分を付箋に書き出し、「明日からの一手」を話し合いました。副学長や学部長までは届くがその下の教員には届きにくい、教員一人ひとりが自分のこととして受け止めていない、危機感が共有されていない、教員と職員が分断されている、といった課題が多くのグループから挙がりました。一手としては、味方を増やすこと、学生の声を聞くこと、自由に話せる会議体を設けること、学部を横断して翻訳する役職や組織を置くことなどが提案されました。</p><p>質疑応答では、共愛学園前橋国際大学の初期の危機感について質問がありました。大森学長は、入学定員充足率が64%まで落ちた時期があったと述べ、当時は声を上げるのではなく、自ら仕組みを作って上の世代を巻き込んだと答えました。学長補佐を置く利点を問われると、小さな組織で役職者が半数ほどになり、教職員が大学運営を自分のこととして考えるようになると述べました。</p><blockquote class="hl"><p>だから声を上げたんじゃないんです。その仕組みを作って、動いて、実際開催する。そこにその先生、上の先生たちに来ていただくというとこまで仕掛けないと</p><cite>大森 昭生</cite></blockquote><blockquote class="hl"><p>味方になってくれる人がいる位置まではしっかりつながる</p><cite>グループの発表から</cite></blockquote></div><div class="rep"><h3>閉会挨拶</h3><p class="rsub">吉村 充功（日本文理大学）</p><p>吉村先生は、学長個人のビジョンではなく、建学の精神を含む大学のビジョンを教職員がどう解釈し共有しているかが大切だと述べました。学長自身も翻訳者であり、トップとミドルの役割は、走り回ってくれる教職員を学内で見つけることにあるとまとめました。あわせて、高校教育改革と大学の教学マネジメントとの接続を、本研究会の科研で扱えるテーマとして挙げました。第9回「共創を作り出すリーダーシップ」では、この高校との接続も取り上げています。</p><p>第8回は、科研費第2期のパイロット事例研究として位置づけています。トップも翻訳者であること、翻訳が上からも下からも行われること、各層の文脈に合わせて言い換えられること、その前提に互いの信頼があることが確認できました。これらは今後の調査設計に活かします。</p><p>2026年3月25日の『教育学術新聞』に開催報告が掲載されました。</p><blockquote class="hl"><p>走り回ってくれる教員、職員の方をどれだけ学内で見つけて、自分ごと化して動けるようにしていくか</p><cite>吉村 充功</cite></blockquote></div></section>
+<section><div class="eyebrow">PROGRAM</div><h2>登壇者とプログラム</h2><ul class="speakers"><li><span class='role'>講演</span><div><div class='name'>大森 昭生</div><div class='aff'>共愛学園前橋国際大学 学長</div></div></li><li><span class='role'>講演</span><div><div class='name'>村山 賢哉</div><div class='aff'>共愛学園前橋国際大学 国際社会学部長</div><div class='talk'>「改革の進め方の裏側」</div></div></li><li><span class='role'>講演</span><div><div class='name'>後藤 さゆり</div><div class='aff'>共愛学園前橋国際大学 副学長</div><div class='talk'>「自律的組織を生成する――対話による合意形成」</div></div></li><li><span class='role'>パネルディスカッション</span><div><div class='name'>山本 啓一（ファシリテーター）・吉村 充功・成田 秀夫</div><div class='aff'>北陸大学・日本文理大学・桐蔭横浜大学</div></div></li><li><span class='role'>グループワーク</span><div><div class='name'>成田 秀夫（ファシリテーター）</div><div class='aff'>桐蔭横浜大学</div><div class='talk'>「自分の大学の翻訳構造を描く」</div></div></li></ul></section>
+<section><div class="eyebrow">REPORT</div><h2>開催報告</h2><p>以下は、当日の発言録をもとに、各登壇者の発言の要旨をまとめたものです。発言録は自動文字起こしをもとに事務局が作成し、登壇者の確認を経ています。引用部分は発言録からの抜粋です。</p><div class="rep"><h3>趣旨説明</h3><p class="rsub">山本 啓一（北陸大学）</p><p>本研究会は2018年に4名で発足し、2022年からは科研費の助成を受けて年2回の公開研究会を開いています。2025年度に始まった第2期では、「教学マネジメントと生き残りのための変革」をテーマに、「ダイナミックな教学マネジメント体制の構築」をキーワードとして研究を進めています。</p><p>山本は、質保証を深めることと、外から新しいものを取り込むことを両立させる「両利きの経営」が、いまの大学に必要だと述べました。そのうえで、トップ・ミドル・現場が相互に行き来する関係を「ダイナミック」と呼び、学長の教育ビジョンが授業や学生のレベルにどう届くのかを今回の問いとしました。登壇者は共愛学園前橋国際大学の学長・副学長・学部長の3名です。会場には学長8名を含む教職員が集まり、教員と職員の比率はおよそ1.7対1でした。</p><blockquote class="hl"><p>トップによる全学の教育ビジョンは何より大事。これは間違いないんですが、それを具現化する、あるいはそれを学部特性によって翻訳しながら伝えていく、そういうミドルの役割というのは非常に重要じゃないかと。</p><cite>山本 啓一</cite></blockquote></div><div class="rep"><h3>話題提供1　大森 昭生</h3><p class="rsub">共愛学園前橋国際大学 学長</p><figure class="ph rfig"><img src="../images/8th_omori.jpg" alt="話題提供する大森昭生学長" loading="lazy"><figcaption>話題提供する大森昭生学長</figcaption></figure><p>大森学長はまず、大学の概要と意思決定の仕組みを紹介しました。学長は推薦委員会が候補者を選び、教職員全員の信任投票を経て理事会が承認します。副学長と学長補佐は学長が指名します。一方、学部長は課長以上の職員も議決権を持つ教授会の選挙で選ばれます。毎週の学長室会議には理事長も出席し、教員・職員だけでなくパートや委託の職員も参加するスタッフ会議を、教授会よりも重要な会議体として置いています。</p><p>続いて最近の取組が三つ紹介されました。第一は学修成果の可視化です。学生はポートフォリオに蓄えた記録をもとに「共愛12の力」のルーブリックで自己評価し、全学生が教員と面談します。この基盤を作ったのは後藤副学長です。第二はDPからさかのぼったカリキュラム改革で、4年かけて480科目を346科目に絞り、共通科目と専門科目の比率を4対6から6対4に改めました。第三は2026年4月に開設するデジタル共創学部で、構想は学長が描き、モジュール型の科目設計は村山学部長が担いました。</p><blockquote class="hl"><p>結局、学部を作って、このちゃんとモジュール型の科目を設定して、レイトスペシャライゼーションでやったのは村山先生ということになるので、学長のビジョンはここで、実際はこうという話になっていっているということですね。</p><cite>大森 昭生</cite></blockquote></div><div class="rep"><h3>話題提供2　村山 賢哉</h3><p class="rsub">共愛学園前橋国際大学 国際社会学部長（2026年4月からデジタル共創学部長）</p><figure class="ph rfig"><img src="../images/8th_murayama.jpg" alt="話題提供する村山賢哉学部長" loading="lazy"><figcaption>話題提供する村山賢哉学部長</figcaption></figure><p>村山学部長は、ミドルが実際にどう動いているかを二つの型で説明しました。一つは現場から始まる型です。入試や教務の現場で問題が提起されると、学長室会議で相談します。学長は「それで行こうか」「じゃあお願いね」と応じるだけで、具体的な指示はあまり出しません。学部長・副学長・機構長が現場と関係者の調整に走り、各部門とコースの長が集まる月1回の企画運営会議に諮ります。8割はそのまま通り、2割は差し戻されます。</p><p>もう一つは学長のビジョンを実現する型です。学長が国や社会の動きを大学の言葉に置き換えて示し、具体化はミドルに任せます。デジタル共創学部の設置では、新カリキュラムの検証が終わらないうちに国の成長分野支援の申請が採択され、マネジメントスタッフ2名と村山学部長の3名で学部を設計しました。</p><blockquote class="hl"><p>学長は、大森は、社会や国で求められていること、あるいはこれからの時代に必要なことを翻訳するのが非常に上手です。</p><cite>村山 賢哉</cite></blockquote><blockquote class="hl"><p>上下で常に情報が共有される。板挟みになることがあまりないというのが、ミドルの率直な感想でして。</p><cite>村山 賢哉</cite></blockquote></div><div class="rep"><h3>話題提供3　後藤 さゆり</h3><p class="rsub">共愛学園前橋国際大学 副学長</p><figure class="ph rfig"><img src="../images/8th_1.jpg" alt="話題提供する後藤さゆり副学長" loading="lazy"><figcaption>話題提供する後藤さゆり副学長</figcaption></figure><p>後藤副学長は、質保証のために教員一人ひとりの授業を変えてもらう場面に絞って話しました。前提として、「共愛＝共生」という理念が学生も含めて共有されていること、開学以来の学生中心主義があること、教職員も学生も運営に関わる「スタッフ」であることを挙げました。文部科学省の補助事業も、ビジョンを先に描いて取りに行ったのではなく、事業を走らせるうちにいまの形ができたといいます。</p><p>新カリキュラムを作る際には、決定を伝達するのでも、賛否を問う議論にするのでもなく、対話を重ねました。5つのコースはそれぞれ専門分野が違います。後藤副学長は案を一つに絞らずに示し、各コースから望ましい形を聞き取って、ほぼ1年かけて話し合いを続けました。その結果、大きな反対はなかったと述べました。</p><blockquote class="hl"><p>対話をしながら、何を言っても変なふうに受け取られない、きちんと対応してもらえるという信頼関係を作りながらやったことで、それぞれの組織が自律的に考えてくれて、新カリキュラムも無事回すことができているかなというふうに思っています。</p><cite>後藤 さゆり</cite></blockquote><blockquote class="hl"><p>その時に「こうしましょう」の一案だけではなくて、「提案しますが、各コースでどんな形が望ましいかを考えてください」みたいなことを言って、提案してもらうんですね。</p><cite>後藤 さゆり（カリキュラム案を示した際の言葉）</cite></blockquote></div><div class="rep"><h3>パネルディスカッション</h3><p class="rsub">ファシリテーター：山本 啓一／登壇：大森 昭生・後藤 さゆり・村山 賢哉／コメンテーター：吉村 充功・成田 秀夫</p><figure class="ph rfig"><img src="../images/8th_2.jpg" alt="パネルディスカッション" loading="lazy"><figcaption>パネルディスカッション</figcaption></figure><p>吉村先生は、学内で誰が板挟みになっているのかを尋ねました。村山学部長は、論理で仕組みを作ろうとする自分と現場の間に後藤副学長が入っているのではないかと答え、後藤副学長は、やっているときは必死で板挟みとは感じなかったと応じました。ビジョンは最初から共有されていたのかという問いには、後藤副学長と村山学部長が、学長個人よりも大学の理念と学生中心主義に従ってきたと答えました。成田先生が、自転車操業のように動き続けているから改革が進むのではないかと問うと、大森学長は止まったら終わりだと答えました。</p><p>山本は、大森学長自身が国の動向を学内向けに翻訳していると指摘しました。村山学部長は、学長が大学として翻訳したものを、自分が学生に合わせて翻訳していると述べました。平時の学長は学内を歩いて相談を受け、ミドルがそれを形にするために走り回る関係も紹介されました。総務部長を学長補佐に充てている理由について、大森学長は、予算に関わる実務上の理由と、教員と職員が対等であることを示す意味の二つを挙げました。</p><blockquote class="hl"><p>多分その翻訳をする時に、共愛学園前橋国際大学的に翻訳するとこうだよっていうのを学長が示してくれて、じゃあそれをうちの学生版に翻訳をするというのを、意識が出ている気はします。</p><cite>村山 賢哉</cite></blockquote><blockquote class="hl"><p>そもそも大森先生は、国の答申とか動向を翻訳してるわけだけど、それを学内に向けて翻訳するということをやってるんで、まず大森先生が何かを翻訳してますよねっていうところがあるなと思ったんです。</p><cite>山本 啓一</cite></blockquote></div><div class="rep"><h3>グループワークと質疑応答</h3><p class="rsub">ファシリテーター：成田 秀夫</p><figure class="ph rfig"><img src="../images/8th_share.jpg" alt="グループごとの発表" loading="lazy"><figcaption>グループごとの発表</figcaption></figure><p>参加者は9グループに分かれ、ビジョンが現場に届いている部分と途切れている部分を付箋に書き出し、「明日からの一手」を話し合いました。副学長や学部長までは届くがその下の教員には届きにくい、教員一人ひとりが自分のこととして受け止めていない、危機感が共有されていない、教員と職員が分断されている、といった課題が多くのグループから挙がりました。一手としては、味方を増やすこと、学生の声を聞くこと、自由に話せる会議体を設けること、学部を横断して翻訳する役職や組織を置くことなどが提案されました。</p><p>質疑応答では、共愛学園前橋国際大学の初期の危機感について質問がありました。大森学長は、入学定員充足率が64%まで落ちた時期があったと述べ、当時は声を上げるのではなく、自ら仕組みを作って上の世代を巻き込んだと答えました。学長補佐を置く利点を問われると、小さな組織で役職者が半数ほどになり、教職員が大学運営を自分のこととして考えるようになると述べました。</p><blockquote class="hl"><p>その危機感の共有はやっぱり翻訳が必要で、いくら18歳人口が減ってますとか受験生が減ってますと言っても、「うちの大学はなんとかなるんじゃないか」みたいな感覚を、どうこの大学の置かれている環境を翻訳していくか</p><cite>グループの発表から</cite></blockquote><blockquote class="hl"><p>何か学部横断的な何か組織なり、役職なり、役目なりを作って、その方がうまく翻訳をしなきゃいけないんだなというふうに改めて思いました。</p><cite>グループの発表から</cite></blockquote></div><div class="rep"><h3>閉会挨拶</h3><p class="rsub">吉村 充功（日本文理大学）</p><p>吉村先生は、学長個人のビジョンではなく、建学の精神を含む大学のビジョンを教職員がどう解釈し共有しているかが大切だと述べました。学長自身も翻訳者であり、トップとミドルの役割は、走り回ってくれる教職員を学内で見つけることにあるとまとめました。あわせて、高校教育改革と大学の教学マネジメントとの接続を、本研究会の科研で扱えるテーマとして挙げました。第9回「共創を作り出すリーダーシップ」では、この高校との接続も取り上げています。</p><p>第8回は、科研費第2期のパイロット事例研究として位置づけています。トップも翻訳者であること、翻訳が上からも下からも行われること、各層の文脈に合わせて言い換えられること、その前提に互いの信頼があることが確認できました。これらは今後の調査設計に活かします。</p><p>2026年3月25日の『教育学術新聞』に開催報告が掲載されました。</p><blockquote class="hl"><p>学長自身がやっぱり翻訳してる、ミドルだけが翻訳してるんじゃなくて、それぞれが翻訳してるっていうのが大事で、それを学内に落とし込みながら後藤先生と村山先生が走り回る。</p><cite>吉村 充功</cite></blockquote></div></section>
 <section><div class="eyebrow">VOICES</div><h2>参加者アンケートから</h2><p>学長・副学長・学部長の三者が異なる景色を語ったことへの反応が中心です。ビジョンを「翻訳」する役割を自分の立場に引き寄せて考えた記述が多く、話題提供2・3の評価4.86は全回の全セッションで最も高い数値となりました。</p><div class="tbl" style="max-width:560px"><table class="stats"><tr class="total"><th>研究会全体の満足度</th><td class="bar"><span class="track"><span class="fill" style="width:93.6%"></span></span></td><td class="v">4.68</td></tr><tr><th>話題提供1　大森 昭生</th><td class="bar"><span class="track"><span class="fill" style="width:95.0%"></span></span></td><td class="v">4.75</td></tr><tr><th>話題提供2・3　村山 賢哉・後藤 さゆり</th><td class="bar"><span class="track"><span class="fill" style="width:97.2%"></span></span></td><td class="v">4.86</td></tr><tr><th>パネルディスカッション</th><td class="bar"><span class="track"><span class="fill" style="width:94.0%"></span></span></td><td class="v">4.70</td></tr><tr><th>グループワーク</th><td class="bar"><span class="track"><span class="fill" style="width:87.4%"></span></span></td><td class="v">4.37</td></tr><tr><th>会場との質疑応答</th><td class="bar"><span class="track"><span class="fill" style="width:88.2%"></span></span></td><td class="v">4.41</td></tr><tr><th>仕事との関連性・有用性</th><td class="bar"><span class="track"><span class="fill" style="width:93.6%"></span></span></td><td class="v">4.68</td></tr></table></div><p class="barnote">横棒は5点満点に対する位置を示します。細い縦線は4.0の目盛りです。</p><ul class="quotes"><li>学長のビジョンをどのように「翻訳」して伝えるか。「伝わる」ようにするためには聞き手を育てることも重要で、それはミドルマネージャーの重要な役割でもあると考える機会となった点。（大学教員・副学長／学部長）</li><li>ビジョンの浸透は、自分ではやっているつもりでも、改めて振り返ると「つもり」になっていることに気づかされた。（大学教員・学長）</li><li>組織の内側について、かなり突っ込んだところまでお話しいただけて、大変ありがたかったです。他所ではなかなか聞けない内容だったので、参加できて本当によかったです。（大学職員）</li></ul><p style="font-size:14px;color:var(--gray);margin-top:12px">参加者アンケートの回答は28件（回答率40.0%）です。満足度は5段階で、数値が大きいほど高い評価を示します。</p></section>
 <section><div class="eyebrow">MATERIALS</div><h2>資料</h2><ul class="mats"><li><span class='k'>配布資料</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>発言録</span><span>参加者向けに共有しています（掲載準備中）</span></li><li><span class='k'>アンケート結果</span><span>参加者向けに共有しています（掲載準備中）</span></li></ul><p style='font-size:13px;color:var(--gray)'>本研究会はJSPS科研費 基盤研究(C)「ダイナミックな教学マネジメント体制の構築〜ミドル教職員の育成と組織開発に向けて」（研究代表者：山本啓一）の助成を受けて開催しました。</p></section>
 <div class='meta' style='margin-top:48px'><a href='7th.html'>← 第7回公開研究会</a><a href='9th.html'>第9回公開研究会 →</a></div>
-<footer class="site">
-  <div>大学リーダーシップ研究会事務局<br>京都府京都市北区紫野北花ノ坊町96 佛教大学キャンパス内（水谷俊之）<br>toshimiz@bukkyo-u.ac.jp ／ ke-yamamoto@hokuriku-u.ac.jp（山本）</div>
-  <div style="margin-top:10px">© 大学リーダーシップ研究会 — College Leadership Forum</div>
-</footer>
-</div></body></html>
+</div>
+<footer class="mfoot"><div class="mx"><div><b>大学リーダーシップ研究会</b>College Leadership Forum</div><div>大学リーダーシップ研究会事務局<br>京都府京都市北区紫野北花ノ坊町96 佛教大学キャンパス内（水谷俊之）<br>toshimiz@bukkyo-u.ac.jp</div></div></footer>
+</body></html>
